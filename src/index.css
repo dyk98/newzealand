@@ -1,0 +1,48 @@
+:root {
+  --ink: #12333a;
+  --muted: #64777c;
+  --soft: #f6fbf3;
+  --blue: #158b9a;
+  --green: #67bf55;
+  --yellow: #ffd45e;
+  --orange: #ff8b4f;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: cubic-bezier(0.2, 1.4, 0.34, 1);
+
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'PingFang SC',
+    'Microsoft YaHei', Arial, sans-serif;
+  color: var(--ink);
+  background: #eef9f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #eef9f8;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+}
