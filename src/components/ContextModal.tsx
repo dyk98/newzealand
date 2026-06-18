@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
-import type { UIEvent } from 'react'
+import type { CSSProperties, UIEvent } from 'react'
 import { ExternalLink, Info, X } from 'lucide-react'
+import { useJellyIndex } from '../hooks/useJellyIndex'
 import type { ContextCard, ContextTab } from '../types/trip'
 import { openExternalLink } from '../utils/storage'
 
@@ -37,6 +38,14 @@ export function ContextModal({ card, closing, onClose }: ContextModalProps) {
   ].filter((tab) => tab.available)
 
   const currentTab = tabs.some((tab) => tab.id === activeTab) ? activeTab : 'overview'
+  const currentTabIndex = Math.max(0, tabs.findIndex((tab) => tab.id === currentTab))
+  const currentTabVisualIndex = useJellyIndex(currentTabIndex)
+  const tabListStyle = {
+    '--tab-count': tabs.length,
+  } as CSSProperties
+  const tabIndicatorStyle = {
+    transform: `translate3d(${currentTabVisualIndex * 100}%, 0, 0)`,
+  } as CSSProperties
 
   const selectImage = (index: number) => {
     const boundedIndex = Math.max(0, Math.min(index, images.length - 1))
@@ -128,7 +137,8 @@ export function ContextModal({ card, closing, onClose }: ContextModalProps) {
           <h2>{card.name}</h2>
           <strong>{card.cn}</strong>
 
-          <div className="context-inner-tabs" role="tablist" aria-label="详情内容">
+          <div className="context-inner-tabs" role="tablist" aria-label="详情内容" style={tabListStyle}>
+            <span className="context-inner-tab-indicator" style={tabIndicatorStyle} aria-hidden="true" />
             {tabs.map((tab) => (
               <button
                 className={currentTab === tab.id ? 'is-active' : ''}

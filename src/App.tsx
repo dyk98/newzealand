@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
+import { BottomNav } from './components/BottomNav'
 import { ContextModal } from './components/ContextModal'
 import { contextCardMap, tripDays } from './data/tripData'
 import { DayDetailPage } from './pages/DayDetailPage'
 import { ItineraryListPage } from './pages/ItineraryListPage'
 import { OverviewPage } from './pages/OverviewPage'
-import { TodosPage } from './pages/TodosPage'
+import { PrepPage } from './pages/PrepPage'
 import { readStoredState, writeStoredState } from './utils/storage'
 
 const appStateKey = 'newzealand-trip:app-state:v2'
@@ -45,6 +46,7 @@ function App() {
   }, [state])
 
   const route = useMemo(() => resolveRoute(hash), [hash])
+  const navActive = route.kind === 'overview' ? 'overview' : route.kind === 'todos' ? 'todos' : 'trip'
   const visibleContextId = selectedContextId ?? closingContextId
   const selectedContextCard = visibleContextId ? contextCardMap.get(visibleContextId) : undefined
   const isContextClosing = Boolean(closingContextId && !selectedContextId)
@@ -95,6 +97,8 @@ function App() {
 
   return (
     <>
+      <BottomNav active={navActive} />
+
       {route.kind === 'overview' ? (
         <OverviewPage completedTodoIds={state.completedTodoIds} />
       ) : null}
@@ -102,11 +106,12 @@ function App() {
       {route.kind === 'trip' ? <ItineraryListPage likedDays={state.likedDays} /> : null}
 
       {route.kind === 'todos' ? (
-        <TodosPage completedTodoIds={state.completedTodoIds} onToggleTodo={toggleTodo} />
+        <PrepPage completedTodoIds={state.completedTodoIds} onToggleTodo={toggleTodo} />
       ) : null}
 
       {route.kind === 'day' ? (
         <DayDetailPage
+          key={route.day.id}
           day={route.day}
           completedTodos={state.completedDayTodos}
           liked={state.likedDays.includes(route.day.id)}

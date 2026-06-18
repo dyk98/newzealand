@@ -15,8 +15,8 @@ import {
   Route,
   Umbrella,
 } from 'lucide-react'
-import { BottomNav } from '../components/BottomNav'
 import { contextCardMap, tripDays } from '../data/tripData'
+import { useJellyIndex } from '../hooks/useJellyIndex'
 import type { TripDay } from '../types/trip'
 import { openAppHash } from '../utils/storage'
 
@@ -41,15 +41,38 @@ export function DayDetailPage({
   onSelectPlan,
   onOpenContext,
 }: DayDetailPageProps) {
-  const [activePanel, setActivePanel] = useState<'route' | 'prep'>('route')
+  const [activePanel, setActivePanel] = useState<'route' | 'prep'>(() => getDefaultPanel(day, completedTodos))
   const selectedPlan =
     day.weatherPlans?.find((plan) => plan.id === selectedPlanId) ?? day.weatherPlans?.[0]
   const completedCount = day.todos.filter((todo) => completedTodos.includes(todoKey(day.id, todo))).length
+  const panelTargetIndex = activePanel === 'prep' ? 0 : 1
+  const panelVisualIndex = useJellyIndex(panelTargetIndex)
+  const planTargetIndex = Math.max(
+    0,
+    day.weatherPlans?.findIndex((plan) => plan.id === selectedPlan?.id) ?? 0,
+  )
+  const planVisualIndex = useJellyIndex(planTargetIndex)
   const progress = Math.round((completedCount / Math.max(1, day.todos.length)) * 100)
   const nextDay = tripDays.find((item) => item.day === day.day + 1)
   const routeColumns = useMemo(() => {
     return `repeat(${Math.min(4, day.routeSteps.length)}, minmax(0, 1fr))`
   }, [day.routeSteps.length])
+  const panelIndicatorStyle = {
+    transform: `translate3d(${panelVisualIndex * 100}%, 0, 0)`,
+  } as CSSProperties
+  const planSwitchStyle = {
+    '--tab-count': day.weatherPlans?.length ?? 1,
+  } as CSSProperties
+  const planIndicatorStyle = {
+    transform: `translate3d(${planVisualIndex * 100}%, 0, 0)`,
+  } as CSSProperties
+
+  const handleToggleDayTodo = (todo: string, done: boolean) => {
+    onToggleTodo(todoKey(day.id, todo))
+    if (!done && completedCount + 1 >= day.todos.length) {
+      setActivePanel('route')
+    }
+  }
 
   return (
     <main className="app-shell" aria-label={`${day.date} Day ${day.day} 路书`}>
@@ -131,33 +154,36 @@ export function DayDetailPage({
           </section>
         ) : null}
 
-        <section className="place-preview" aria-label="今日地点预览">
-          <div>
-            <span>Before Route</span>
-            <h2>出发前先认识这些点</h2>
-          </div>
-          <div className="place-mini-row">
-            {day.previewContextIds.map((cardId) => {
-              const card = contextCardMap.get(cardId)
-              if (!card) return null
-              return (
-                <button
-                  className="place-mini-card"
-                  data-context-id={card.id}
-                  type="button"
-                  key={card.id}
-                  onClick={() => onOpenContext(card.id)}
-                >
-                  {card.image ? <img src={card.image} alt="" /> : <span className="mini-fallback">{card.actionLabel}</span>}
-                  <span>{card.name}</span>
-                </button>
-              )
-            })}
-          </div>
-        </section>
+        {day.previewContextIds.length ? (
+          <section className="place-preview" aria-label="今日核心看点">
+            <div>
+              <span>Highlights</span>
+              <h2>今日核心看点</h2>
+            </div>
+            <div className="place-mini-row">
+              {day.previewContextIds.map((cardId) => {
+                const card = contextCardMap.get(cardId)
+                if (!card) return null
+                return (
+                  <button
+                    className="place-mini-card"
+                    data-context-id={card.id}
+                    type="button"
+                    key={card.id}
+                    onClick={() => onOpenContext(card.id)}
+                  >
+                    {card.image ? <img src={card.image} alt="" /> : <span className="mini-fallback">{card.actionLabel}</span>}
+                    <span>{card.name}</span>
+                  </button>
+                )
+              })}
+            </div>
+          </section>
+        ) : null}
 
         <section className="day-panels" aria-label="当天信息切换">
           <div className="content-tabs" role="tablist" aria-label={`Day ${day.day} 内容`}>
+            <span className="content-tab-indicator" style={panelIndicatorStyle} aria-hidden="true" />
             <button
               className={activePanel === 'prep' ? 'is-active' : ''}
               type="button"
@@ -251,7 +277,8 @@ export function DayDetailPage({
                       <h2>当天方案</h2>
                     </div>
                   </div>
-                  <div className="plan-switch">
+                  <div className="plan-switch" style={planSwitchStyle}>
+                    <span className="plan-switch-indicator" style={planIndicatorStyle} aria-hidden="true" />
                     {day.weatherPlans.map((plan) => (
                       <button
                         className={plan.id === selectedPlan.id ? 'is-active' : ''}
@@ -315,7 +342,7 @@ export function DayDetailPage({
                         className={`todo-item ${done ? 'is-done' : ''}`}
                         key={key}
                         type="button"
-                        onClick={() => onToggleTodo(key)}
+                        onClick={() => handleToggleDayTodo(todo, done)}
                       >
                         <span className="todo-check">
                           {done ? <CheckCircle2 size={22} /> : <Circle size={22} />}
@@ -345,11 +372,13 @@ export function DayDetailPage({
             </button>
           </section>
         ) : null}
-
-        <BottomNav active="trip" />
       </section>
     </main>
   )
+}
+
+function getDefaultPanel(day: TripDay, completedTodos: string[]) {
+  return day.todos.every((todo) => completedTodos.includes(todoKey(day.id, todo))) ? 'route' : 'prep'
 }
 
 function todoKey(dayId: string, todo: string) {

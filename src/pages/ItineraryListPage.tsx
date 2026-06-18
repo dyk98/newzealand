@@ -1,5 +1,4 @@
 import { BedDouble, CalendarDays, Car, Clock, ListChecks, Sparkles } from 'lucide-react'
-import { BottomNav } from '../components/BottomNav'
 import { tripDays } from '../data/tripData'
 import { openAppHash } from '../utils/storage'
 
@@ -11,18 +10,14 @@ export function ItineraryListPage({ likedDays }: ItineraryListPageProps) {
   return (
     <main className="app-shell" aria-label="行程列表">
       <section className="phone-canvas page-canvas">
-        <header className="list-hero">
-          <span>Itinerary</span>
-          <h1>09.24-10.06 全部行程</h1>
-          <p>先看每天节奏，再点进具体日期。重点日、早起日、长途交通日和恢复日都已标出来。</p>
+        <header className="overview-hero page-hero">
+          <img src="/trip-media/lake-wanaka.jpg" alt="新西兰湖边行程列表背景" />
+          <div className="overview-hero-content">
+            <span>Itinerary</span>
+            <h1>09.24-10.06 全部行程</h1>
+            <p>先看每天节奏，再点进具体日期。重点日、早起日、长途交通日和恢复日都已标出来。</p>
+          </div>
         </header>
-
-        <section className="trip-filter-row" aria-label="行程标记说明">
-          <span>核心日</span>
-          <span>早起</span>
-          <span>长交通</span>
-          <span>自由 / 恢复</span>
-        </section>
 
         <section className="day-list" aria-label="每日行程">
           {tripDays.map((day) => (
@@ -83,8 +78,6 @@ export function ItineraryListPage({ likedDays }: ItineraryListPageProps) {
             </button>
           ))}
         </section>
-
-        <BottomNav active="trip" />
       </section>
     </main>
   )

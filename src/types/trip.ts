@@ -102,11 +102,15 @@ export type TodoItem = {
   due?: string
   dayId?: string
   priority?: 'high' | 'medium' | 'low'
+  note?: string
+  amount?: string
 }
 
 export type TodoGroup = {
   id: string
   title: string
   subtitle: string
+  eyebrow?: string
+  summary?: string
   items: TodoItem[]
 }
