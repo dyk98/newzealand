@@ -46,6 +46,17 @@ function App() {
   }, [state])
 
   const route = useMemo(() => resolveRoute(hash), [hash])
+
+  useEffect(() => {
+    const frameId = window.requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+      document.scrollingElement?.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+      document.querySelector('.phone-canvas')?.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    })
+
+    return () => window.cancelAnimationFrame(frameId)
+  }, [hash])
+
   const navActive = route.kind === 'overview' ? 'overview' : route.kind === 'todos' ? 'todos' : 'trip'
   const visibleContextId = selectedContextId ?? closingContextId
   const selectedContextCard = visibleContextId ? contextCardMap.get(visibleContextId) : undefined

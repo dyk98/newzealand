@@ -1,4 +1,5 @@
 import { BedDouble, CalendarDays, Car, Clock, ListChecks, Sparkles } from 'lucide-react'
+import { RouteMapCard } from '../components/RouteMapCard'
 import { tripDays } from '../data/tripData'
 import { openAppHash } from '../utils/storage'
 
@@ -18,6 +19,8 @@ export function ItineraryListPage({ likedDays }: ItineraryListPageProps) {
             <p>先看每天节奏，再点进具体日期。重点日、早起日、长途交通日和恢复日都已标出来。</p>
           </div>
         </header>
+
+        <RouteMapCard compact />
 
         <section className="day-list" aria-label="每日行程">
           {tripDays.map((day) => (
