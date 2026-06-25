@@ -40,6 +40,27 @@ const img = {
   day2Pancakes: '/trip-media/day2-pancakes.jpg',
 }
 
+const reviewLinks = {
+  nzta: { label: 'NZTA 路况', url: 'https://www.journeys.nzta.govt.nz/highway-conditions' },
+  sh94: { label: 'SH94 Milford Road', url: 'https://www.nzta.govt.nz/projects/sh94-milford-road/sh94-milford-road-status' },
+  docHooker: {
+    label: 'DOC Hooker Track',
+    url: 'https://www.doc.govt.nz/parks-and-recreation/places-to-go/canterbury/places/aoraki-mount-cook-national-park/things-to-do/tracks/hooker-valley-track/',
+  },
+  metservice: { label: 'MetService', url: 'https://www.metservice.com/' },
+  metAoraki: { label: 'MetService Aoraki', url: 'https://www.metservice.com/mountains-and-parks/national-parks/aoraki-mt-cook' },
+  metMilford: { label: 'MetService Milford', url: 'https://www.metservice.com/towns-cities/regions/southland/locations/milford-sound' },
+  qantasStatus: { label: 'Qantas flight status', url: 'https://www.qantas.com/au/en/travel-info/flight-status.html' },
+  hkiaDining: { label: 'HKIA dining', url: 'https://www.hongkongairport.com/en/shop-dine/dining/' },
+  realNzMilford: { label: 'RealNZ Milford', url: 'https://www.realnz.com/en/experiences/day-cruises/milford-sound-day-trip-from-te-anau/' },
+  chcFood: { label: 'CHC terminal food', url: 'https://www.christchurchairport.co.nz/travellers/at-the-airport/eat-and-drink/in-the-terminal/' },
+  melFood: { label: 'MEL shop & eat', url: 'https://www.melbourneairport.com.au/shop-eat' },
+  skyline: { label: 'Skyline hours', url: 'https://queenstown.skyline.co.nz/opening-hours/' },
+  onsen: { label: 'Onsen', url: 'https://www.onsen.co.nz/' },
+  shotover: { label: 'Shotover Jet', url: 'https://www.shotoverjet.com/prices/individual/' },
+  nzone: { label: 'NZONE Skydive', url: 'https://www.nzoneskydive.co.nz/' },
+}
+
 export const contextCards: ContextCard[] = [
   {
     id: 'guangzhou-transfer',
@@ -1665,6 +1686,31 @@ export const tripDays: TripDay[] = [
       '离线保存 QF128 行程单 / 订单截图',
     ],
     importantTip: '最晚 16:30 到香港机场，宁可早到，不要卡点。',
+    reviewChecks: [
+      {
+        id: 'day-1-review-car-flight',
+        timing: '前一天',
+        title: '确认包车、航班和证件',
+        detail: '确认司机、车牌、上车点、跨境路线和 QF128 航班状态；护照、签证材料、机票不要放托运行李。',
+        links: [reviewLinks.qantasStatus],
+      },
+      {
+        id: 'day-1-review-airport',
+        timing: '当天',
+        title: '到机场后先办手续再吃饭',
+        detail: '抵达 HKG 后先值机、托运、出境和安检，再按登机口附近餐饮解决晚餐。',
+        links: [reviewLinks.hkiaDining],
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '出发日只求稳到机场和睡好红眼航班，不安排香港游玩。',
+      items: [
+        { label: '晚餐默认', value: 'HKG T1 过安检后就近吃', note: '不要出机场或为了餐厅走太远。' },
+        { label: '活动默认', value: '不安排活动', note: '把时间留给值机、托运、安检和登机。' },
+        { label: '兜底', value: '时间充裕再考虑 lounge', note: '排队长或价格不合适就放弃。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-1-food',
@@ -1845,6 +1891,31 @@ export const tripDays: TripDay[] = [
       '确认基督城酒店 late check-in',
     ],
     importantTip: '如果下雨或太累，直接改 C 线：悉尼塔 + 市区午饭 + 早回机场。',
+    reviewChecks: [
+      {
+        id: 'day-2-review-flight-storage',
+        timing: '前一天',
+        title: '确认两段航班和行李寄存',
+        detail: '确认 QF128 抵达、QF139 起飞、SYD T1 行李寄存位置和营业情况；悉尼短游只在航班时间稳定时执行。',
+        links: [reviewLinks.qantasStatus],
+      },
+      {
+        id: 'day-2-review-weather',
+        timing: '当天',
+        title: '落地后按天气和体力选路线',
+        detail: '晴天走 Circular Quay + Opera House + The Rocks；雨大或太累就缩短短游，早点回机场。',
+        links: [reviewLinks.metservice],
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '悉尼只是中转短游，目标是看经典海港并准时回机场。',
+      items: [
+        { label: '午餐默认', value: 'The Glenmore', note: '红眼后想更轻松就改 MCA Cafe。' },
+        { label: '活动默认', value: 'Circular Quay + 歌剧院外观 + The Rocks', note: '不进歌剧院内部，不拉高步行强度。' },
+        { label: '兜底', value: 'Pancakes On The Rocks / MCA Cafe', note: '口味不统一或太累时更稳。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-2-food',
@@ -2042,6 +2113,30 @@ export const tripDays: TripDay[] = [
       '提前标记 Geraldine / Fairlie 午餐、厕所、加油和停车点',
     ],
     importantTip: '取车当天不要贪景点，右舵适应比多拍一站更重要。',
+    reviewChecks: [
+      {
+        id: 'day-3-review-road-weather',
+        timing: '前一天',
+        title: '查基督城到湖区路况和天气',
+        detail: '确认 Christchurch -> Geraldine / Fairlie -> Tekapo -> Twizel 没有封路、施工或明显恶劣天气。',
+        links: [reviewLinks.nzta, reviewLinks.metservice],
+      },
+      {
+        id: 'day-3-review-rental',
+        timing: '当天',
+        title: '取车后先适应，不急着赶路',
+        detail: '检查车辆、保险、油量、轮胎和行李空间；副驾先设好第一段导航，再离开机场区域。',
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '右舵第一天，不追景点数量，所有停靠都服务安全到 Twizel。',
+      items: [
+        { label: '午餐默认', value: '顺利就 Fairlie Bakehouse，晚出发就 Barker’s Geraldine', note: '二选一，不要两个都停。' },
+        { label: '活动默认', value: 'Lake Tekapo + 好牧羊人教堂短停', note: '30-60 分钟，拍完继续走。' },
+        { label: '晚餐默认', value: 'Twizel 18:30-19:00 早吃', note: '为 Day 4 Mt Cook 留体力。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-3-food',
@@ -2259,6 +2354,31 @@ export const tripDays: TripDay[] = [
       '提前准备 Mt Cook 午餐轻食，不把午饭押在现场餐厅',
     ],
     importantTip: '如果全程只挑一天为风景牺牲睡眠，我会选这天。',
+    reviewChecks: [
+      {
+        id: 'day-4-review-hooker',
+        timing: '前一天',
+        title: '查 Hooker Valley Track 开放和 Aoraki 天气',
+        detail: '确认 DOC 徒步提醒、山区风雨、低温和体感；如果天气或步道状态不好，就执行短线方案。',
+        links: [reviewLinks.docHooker, reviewLinks.metAoraki],
+      },
+      {
+        id: 'day-4-review-road',
+        timing: '当天',
+        title: '确认进山和去 Wanaka 路况',
+        detail: '早上查 Twizel -> Mt Cook 和下午 Mt Cook -> Wanaka 路况；徒步后司机先休整再开车。',
+        links: [reviewLinks.nzta],
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '这是核心风景日，但边界很清楚：上午进山，下午按体力去 Wanaka。',
+      items: [
+        { label: '活动默认', value: 'Hooker Valley 开放段 / 天气好再走完整线', note: '状态不好就改 Kea Point 或 Tasman 短线。' },
+        { label: '午餐默认', value: 'Mt Cook 自带轻食 + Pukaki 三文鱼顺路补', note: '不要为了午餐耽误离山时间。' },
+        { label: '晚餐默认', value: 'Wanaka 早吃早休息', note: '到镇后不再加项目。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-4-food',
@@ -2452,6 +2572,30 @@ export const tripDays: TripDay[] = [
     note: '这一天是恢复日，不安排长途驾驶。',
     todos: ['确认住宿洗衣机 / 烘干机', '提前在 Google Maps 离线标记 Wanaka 超市、加油站和停车点', '补充车上水、早餐和后面两天零食', '确认 Wanaka 晚餐：订一顿想吃的，另一顿保持灵活'],
     importantTip: '故意慢下来，是为了后半程不疲劳驾驶。',
+    reviewChecks: [
+      {
+        id: 'day-5-review-dinner',
+        timing: '前一天',
+        title: '确认 Wanaka 晚餐和洗衣条件',
+        detail: '如果想吃 Kika / Bistro Gentil，提前确认订位；同时确认住宿洗衣、超市和加油点。',
+      },
+      {
+        id: 'day-5-review-weather',
+        timing: '当天',
+        title: '按天气决定是否加轻活动',
+        detail: '天气好就湖边和 Wanaka Tree；天气差或不想走动，就改 Puzzling World 或彻底休息。',
+        links: [reviewLinks.metservice],
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '恢复日不要过度设计，完成洗衣补给就是成功。',
+      items: [
+        { label: '午餐默认', value: 'Big Fig / 镇中心轻食', note: '快、稳、不要排长队。' },
+        { label: '活动默认', value: '湖边 + That Wanaka Tree', note: '顺路走走，不专门卡点。' },
+        { label: '晚餐默认', value: '想正式就 Kika，累了就 Big Fig', note: '别为了正式餐牺牲恢复。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-5-food',
@@ -2626,6 +2770,30 @@ export const tripDays: TripDay[] = [
     note: 'Queenstown 停车比其他小镇麻烦，住宿优先确认停车位。',
     todos: ['预订 Queenstown 住宿 2 晚', '确认住宿停车位', '出发前查 NZTA Journey Planner，决定 Crown Range 还是 Cromwell 方向', '提前在 Google Maps 标记 Arrowtown 午餐 / 咖啡备选、厕所和停车点'],
     importantTip: 'Crown Range 是风景路线，不是必须路线。',
+    reviewChecks: [
+      {
+        id: 'day-6-review-route',
+        timing: '前一天',
+        title: '确认 Crown Range 是否适合走',
+        detail: '查路况和天气；雨雪、低云、结冰风险或司机不想开山路时，直接走 Cromwell 方向。',
+        links: [reviewLinks.nzta, reviewLinks.metservice],
+      },
+      {
+        id: 'day-6-review-parking-dinner',
+        timing: '当天',
+        title: '确认 Queenstown 停车和晚餐',
+        detail: '进城前明确住宿停车；如果想吃正式餐，提前确认订位，否则第一晚轻松吃。',
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '这是轻松移动日：箭镇吃午饭，下午稳进皇后镇。',
+      items: [
+        { label: '午餐默认', value: 'Provisions / The Fork and Tap', note: 'Aosta 只在已订或时间稳定时选。' },
+        { label: '活动默认', value: 'Arrowtown Chinese Settlement + 老街短走', note: '午餐后轻量看，不深度游。' },
+        { label: '晚餐默认', value: 'Queenstown 第一晚轻松吃', note: 'Fergburger 错峰，正式餐提前订。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-6-food',
@@ -2850,6 +3018,31 @@ export const tripDays: TripDay[] = [
       '预订或确认 Queenstown 晚餐备选，活动拖延时直接改轻松餐',
     ],
     importantTip: '把这天当作选择日，不要变成任务日。',
+    reviewChecks: [
+      {
+        id: 'day-7-review-activity-weather',
+        timing: '前一天',
+        title: '确认主项目和天气',
+        detail: 'Skyline、Onsen、Shotover、跳伞或 TSS 最多选一个主项目；跳伞和喷射快艇尤其要看天气与运营通知。',
+        links: [reviewLinks.skyline, reviewLinks.onsen, reviewLinks.shotover, reviewLinks.nzone],
+      },
+      {
+        id: 'day-7-review-dinner',
+        timing: '当天',
+        title: '午后再确认晚餐节奏',
+        detail: '下午项目可能拖延，正式晚餐不要订太早；如果活动结束晚，就改轻松餐或外带。',
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '自由活动日只选一个主项目，其他都当备选。',
+      items: [
+        { label: '早午餐默认', value: 'Bespoke Kitchen / 市中心轻食', note: '有项目集合时不要卡点吃。' },
+        { label: '活动默认', value: '天气好 Skyline + Luge，想恢复就 Onsen', note: 'Shotover / 跳伞只在明确想玩且已确认时选。' },
+        { label: '晚餐默认', value: 'Blue Kanu', note: '预算更高或想吃 steak 再看 Botswana Butchery。' },
+        { label: '兜底', value: '湖边 + Queenstown Gardens', note: '天气差或大家累时也完整。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-7-food',
@@ -3132,6 +3325,31 @@ export const tripDays: TripDay[] = [
       '购买 Day 9 早餐、饮用水、零食和晕车药',
     ],
     importantTip: '这天的关键不是景点，而是把 Day 9 的不确定性提前处理掉。',
+    reviewChecks: [
+      {
+        id: 'day-8-review-road',
+        timing: '前一天',
+        title: '查 Queenstown 到 Te Anau 路况',
+        detail: '确认路况正常，退房和出发时间不要拖到下午；今天所有安排都服务 Milford 前夜准备。',
+        links: [reviewLinks.nzta],
+      },
+      {
+        id: 'day-8-review-milford-tour',
+        timing: '当天',
+        title: '确认 Milford 一日团集合信息',
+        detail: '到 Te Anau 后确认邮件/短信、集合点、停车、早餐、雨衣、防风层、晕车药和零食。',
+        links: [reviewLinks.realNzMilford, reviewLinks.metMilford],
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: 'Te Anau 是 Milford 前夜基地，不是新景点日。',
+      items: [
+        { label: '午餐默认', value: 'Te Anau 镇中心轻午餐 / Sandfly Cafe', note: '吃完直接处理补给和入住。' },
+        { label: '活动默认', value: 'Lake Te Anau 湖边短走', note: '最多加 Ata Whenua，萤火虫洞只在不晚睡时选。' },
+        { label: '晚餐默认', value: 'Redcliff 18:00-18:30', note: '吃完回去整理 Day 9 随身包。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-8-food',
@@ -3335,6 +3553,30 @@ export const tripDays: TripDay[] = [
     note: '这一天必须早起，不建议自驾去 Milford Sound。',
     todos: ['出发前一天查邮件 / 短信确认一日团运行、集合时间和天气政策', '准备雨衣、防风外套、晕车药、饮用水、简单零食', '手机和相机提前充满电'],
     importantTip: 'Milford 雨天也有价值，瀑布反而更多。',
+    reviewChecks: [
+      {
+        id: 'day-9-review-road-weather',
+        timing: '前一晚',
+        title: '查 SH94 Milford Road 和峡湾天气',
+        detail: '确认 Milford Road 开放、隧道/雪冰/维护提示，以及一日团是否正常运行。',
+        links: [reviewLinks.sh94, reviewLinks.metMilford, reviewLinks.realNzMilford],
+      },
+      {
+        id: 'day-9-review-morning',
+        timing: '当天早上',
+        title: '出门前再核对集合和装备',
+        detail: '早餐、雨衣、防风外套、晕车药、水、零食和充满电的手机都放随身包，提前到集合点。',
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '这天只做 Milford 一日团，不再加任何夜间或自驾活动。',
+      items: [
+        { label: '早餐默认', value: '前一晚准备车上早餐包', note: '不要空腹坐山路大巴。' },
+        { label: '活动默认', value: 'Milford Road + Milford Sound Cruise', note: '雨天瀑布更多，不因下雨轻易失望。' },
+        { label: '晚餐默认', value: 'Te Anau 轻松晚餐', note: '一日团晚到就改外带或不排队餐。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-9-food',
@@ -3508,6 +3750,31 @@ export const tripDays: TripDay[] = [
     note: '这是砍掉西海岸后换来的缓冲日；如果 09.30 没订 Onsen / Skyline，这天下午可作为补充备选。',
     todos: ['预订 Queenstown 住宿 1 晚', '出发前查 NZTA Journey Planner，确认 Te Anau -> Queenstown 路段正常', '确认 10.03 晚餐是否订正式餐；如果累就直接外带或轻松餐'],
     importantTip: '缓冲日的价值就是不把大家逼到疲劳。',
+    reviewChecks: [
+      {
+        id: 'day-10-review-road',
+        timing: '前一天',
+        title: '查 Te Anau 回 Queenstown 路况',
+        detail: 'Milford 后容易疲劳，确认路况后按缓冲日执行，不临时加远路景点。',
+        links: [reviewLinks.nzta],
+      },
+      {
+        id: 'day-10-review-light-activity',
+        timing: '当天',
+        title: '只补一个轻活动',
+        detail: '如果 Day 7 没做 Onsen 或 Skyline，今天最多补一个；累了就只湖边散步和整理。',
+        links: [reviewLinks.onsen, reviewLinks.skyline],
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '这是 Milford 后的恢复日，不是补作业日。',
+      items: [
+        { label: '午餐默认', value: '抵达 Queenstown 后轻松吃', note: '先午餐、入住、停车，再考虑活动。' },
+        { label: '活动默认', value: 'Onsen 可约到就补；否则湖边休整', note: 'Skyline 只在天气好且 Day 7 没做时补。' },
+        { label: '晚餐默认', value: '按体力决定正式餐或外带', note: '累了不要硬订大餐。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-10-food',
@@ -3696,6 +3963,30 @@ export const tripDays: TripDay[] = [
     note: '尽量不要晚于 10:30 出发。',
     todos: ['预订 10.04 Twizel / Tekapo 住宿 1 晚', '出发前查 NZTA Journey Planner，确认 Queenstown -> Cromwell -> Omarama -> Twizel / Tekapo 路段正常', '确认住 Tekapo 看湖景，还是 Twizel 更省心', '确认 10.04 晚餐：Twizel / Tekapo 至少有一个可执行备选'],
     importantTip: '这天的停靠都服务于移动，不要把它变成新的景点日。',
+    reviewChecks: [
+      {
+        id: 'day-11-review-road-weather',
+        timing: '前一天',
+        title: '查回程长路和 Mackenzie 天气',
+        detail: '确认 Queenstown -> Cromwell -> Omarama -> Twizel / Tekapo 路况；天气差时取消湖边补拍。',
+        links: [reviewLinks.nzta, reviewLinks.metAoraki],
+      },
+      {
+        id: 'day-11-review-dinner',
+        timing: '当天',
+        title: '出发前确认晚餐和住宿地',
+        detail: '住 Twizel 就不要为 Tekapo 餐厅再绕；住 Tekapo 再看 Dark Sky Diner 或住宿餐厅。',
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '回程移动日所有停靠都要有离开时间。',
+      items: [
+        { label: '短停默认', value: 'Cromwell 咖啡 / 厕所 / 司机休息', note: '控制 30-45 分钟。' },
+        { label: '午餐默认', value: 'High Country Salmon 或 Omarama 简餐', note: '不为餐厅绕远。' },
+        { label: '活动默认', value: 'Pukaki / Tekapo 顺路补拍', note: '16:30 后不再为了照片拖路。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-11-food',
@@ -3869,6 +4160,31 @@ export const tripDays: TripDay[] = [
     note: '最后一晚必须住机场附近，不安排市区深度活动。',
     todos: ['预订基督城机场附近酒店', '出发前查 NZTA Journey Planner，确认 Twizel / Tekapo -> Christchurch 路段正常', '确认酒店到还车点 / 航站楼距离', '提前加满油', '确认 key drop 位置', '整理托运行李、随身包和还车前不能留车上的物品', '确认机场附近晚餐，不再进基督城市区'],
     importantTip: '前一晚一定把油、行李、还车流程全部处理好。',
+    reviewChecks: [
+      {
+        id: 'day-12-review-road',
+        timing: '前一天',
+        title: '查回基督城路况',
+        detail: '确认 Twizel / Tekapo -> Geraldine / Ashburton -> Christchurch 路况；最后一天不进市区深度游。',
+        links: [reviewLinks.nzta],
+      },
+      {
+        id: 'day-12-review-car-airport',
+        timing: '当天',
+        title: '确认加油、key drop 和机场附近晚餐',
+        detail: '抵达机场附近后先加油、整理车和行李，再吃晚餐；不要把还车准备留到凌晨。',
+        links: [reviewLinks.chcFood],
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '最后自驾日的重点是把 Day 13 凌晨风险提前清掉。',
+      items: [
+        { label: '午餐默认', value: 'Fairlie / Geraldine 二选一', note: '按出发时间选，不两个都停。' },
+        { label: '活动默认', value: '早到才加 International Antarctic Centre', note: '车和行李没整理好就不加。' },
+        { label: '晚餐默认', value: 'Spitfire Square / 机场酒店餐厅', note: '不再开进基督城市区。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-12-food',
@@ -4037,6 +4353,37 @@ export const tripDays: TripDay[] = [
       '安排抵港后回广州交通（包车 / 高铁 / 打车，按行李和到港时间决定）',
     ],
     importantTip: '凌晨不要临时翻箱，前一晚把所有东西放好。',
+    reviewChecks: [
+      {
+        id: 'day-13-review-flight',
+        timing: '前一晚',
+        title: '确认两段航班、行李和中转',
+        detail: '确认 QF168、QF029 航班状态、行李是否直挂香港、墨尔本中转要求和抵港后回广州交通。',
+        links: [reviewLinks.qantasStatus],
+      },
+      {
+        id: 'day-13-review-keydrop',
+        timing: '凌晨',
+        title: 'key drop 前拍照留证',
+        detail: '拍车身、油表、里程、停车位置和钥匙投入前后状态，直到押金解除前都不要删。',
+      },
+      {
+        id: 'day-13-review-food',
+        timing: '中转',
+        title: '先确认登机口再吃饭',
+        detail: 'CHC 和 MEL 都先完成值机/安检/转机确认，再就近吃饭，不为了餐厅走远。',
+        links: [reviewLinks.chcFood, reviewLinks.melFood],
+      },
+    ],
+    dailyRecommendation: {
+      title: '今天默认推荐',
+      summary: '返程日没有旅游任务，目标是顺利还车、中转和回广州。',
+      items: [
+        { label: '早餐默认', value: '前一晚留垫肚子食物 + CHC 航站楼咖啡', note: '先值机安检，再看餐饮。' },
+        { label: '活动默认', value: 'key drop 拍照留证', note: '这就是今天最重要的“活动”。' },
+        { label: '中转默认', value: 'MEL 先看登机口，再就近吃', note: '不要为了特定餐厅走远。' },
+      ],
+    },
     localFeatureGroups: [
       {
         id: 'day-13-return',

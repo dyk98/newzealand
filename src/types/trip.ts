@@ -67,6 +67,26 @@ export type WeatherPlan = {
   detail: string
 }
 
+export type ReviewCheck = {
+  id: string
+  timing: string
+  title: string
+  detail: string
+  links?: ContextLink[]
+}
+
+export type RecommendationItem = {
+  label: string
+  value: string
+  note?: string
+}
+
+export type DailyRecommendation = {
+  title?: string
+  summary?: string
+  items: RecommendationItem[]
+}
+
 export type LocalFeatureCard = {
   id: string
   title: string
@@ -109,6 +129,8 @@ export type TripDay = {
   note: string
   todos: string[]
   importantTip?: string
+  reviewChecks?: ReviewCheck[]
+  dailyRecommendation?: DailyRecommendation
   localFeatureGroups?: LocalFeatureGroup[]
   previewContextIds: string[]
   weatherPlans?: WeatherPlan[]

@@ -19,7 +19,12 @@ import {
 } from 'lucide-react'
 import { contextCardMap, tripDays } from '../data/tripData'
 import { useJellyIndex } from '../hooks/useJellyIndex'
-import type { LocalFeatureCard as LocalFeatureCardType, TripDay } from '../types/trip'
+import type {
+  DailyRecommendation,
+  LocalFeatureCard as LocalFeatureCardType,
+  ReviewCheck,
+  TripDay,
+} from '../types/trip'
 import { openAppHash } from '../utils/storage'
 
 type ActivePanel = 'route' | 'prep' | 'features'
@@ -341,7 +346,7 @@ export function DayDetailPage({
               </section>
             </div>
           ) : activePanel === 'features' ? (
-            <LocalFeaturesPanel groups={localFeatureGroups} />
+            <LocalFeaturesPanel groups={localFeatureGroups} recommendation={day.dailyRecommendation} />
           ) : (
             <div className="panel-content" role="tabpanel">
               <section className="section-block prep-panel">
@@ -355,6 +360,7 @@ export function DayDetailPage({
                 <div className="progress-track" aria-label={`待办完成度 ${progress}%`}>
                   <span style={{ width: `${progress}%` }} />
                 </div>
+                <PrepReviewChecks checks={day.reviewChecks ?? []} />
                 <div className="todo-list">
                   {day.todos.map((todo) => {
                     const key = todoKey(day.id, todo)
@@ -399,7 +405,51 @@ export function DayDetailPage({
   )
 }
 
-function LocalFeaturesPanel({ groups }: { groups: NonNullable<TripDay['localFeatureGroups']> }) {
+function PrepReviewChecks({ checks }: { checks: ReviewCheck[] }) {
+  if (!checks.length) return null
+
+  return (
+    <section className="review-checks" aria-label="临近复查">
+      <div className="review-checks-heading">
+        <span>Review</span>
+        <h3>临近复查</h3>
+      </div>
+      <div className="review-check-list">
+        {checks.map((check) => (
+          <article className="review-check-card" key={check.id}>
+            <div className="review-check-time">{check.timing}</div>
+            <div className="review-check-body">
+              <h4>{check.title}</h4>
+              <p>{check.detail}</p>
+              {check.links?.length ? (
+                <div className="review-check-actions">
+                  {check.links.map((link) => (
+                    <button
+                      type="button"
+                      key={link.url}
+                      onClick={() => window.open(link.url, '_blank', 'noopener,noreferrer')}
+                    >
+                      <span>{link.label}</span>
+                      <ExternalLink size={13} />
+                    </button>
+                  ))}
+                </div>
+              ) : null}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function LocalFeaturesPanel({
+  groups,
+  recommendation,
+}: {
+  groups: NonNullable<TripDay['localFeatureGroups']>
+  recommendation?: DailyRecommendation
+}) {
   const featureGroups = groups
     .map((group) => ({
       ...group,
@@ -417,6 +467,8 @@ function LocalFeaturesPanel({ groups }: { groups: NonNullable<TripDay['localFeat
           </div>
           <div className="tiny-status">吃饭 / 景点 / 项目</div>
         </div>
+
+        {recommendation?.items.length ? <DailyRecommendationCard recommendation={recommendation} /> : null}
 
         <div className="local-feature-groups">
           {featureGroups.length ? (
@@ -440,6 +492,27 @@ function LocalFeaturesPanel({ groups }: { groups: NonNullable<TripDay['localFeat
         </div>
       </section>
     </div>
+  )
+}
+
+function DailyRecommendationCard({ recommendation }: { recommendation: DailyRecommendation }) {
+  return (
+    <section className="daily-recommendation" aria-label="今天默认推荐">
+      <div className="daily-recommendation-heading">
+        <span>Default</span>
+        <h3>{recommendation.title ?? '今天默认推荐'}</h3>
+        {recommendation.summary ? <p>{recommendation.summary}</p> : null}
+      </div>
+      <div className="recommendation-list">
+        {recommendation.items.map((item) => (
+          <article className="recommendation-item" key={`${item.label}-${item.value}`}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+            {item.note ? <p>{item.note}</p> : null}
+          </article>
+        ))}
+      </div>
+    </section>
   )
 }
 
