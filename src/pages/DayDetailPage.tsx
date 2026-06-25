@@ -7,18 +7,22 @@ import {
   ChevronLeft,
   Circle,
   CloudSun,
+  ExternalLink,
   Heart,
   ListChecks,
   MapPin,
   Mountain,
   Navigation,
   Route,
+  Sparkles,
   Umbrella,
 } from 'lucide-react'
 import { contextCardMap, tripDays } from '../data/tripData'
 import { useJellyIndex } from '../hooks/useJellyIndex'
-import type { TripDay } from '../types/trip'
+import type { LocalFeatureCard as LocalFeatureCardType, TripDay } from '../types/trip'
 import { openAppHash } from '../utils/storage'
+
+type ActivePanel = 'route' | 'prep' | 'features'
 
 type DayDetailPageProps = {
   day: TripDay
@@ -41,11 +45,13 @@ export function DayDetailPage({
   onSelectPlan,
   onOpenContext,
 }: DayDetailPageProps) {
-  const [activePanel, setActivePanel] = useState<'route' | 'prep'>(() => getDefaultPanel(day, completedTodos))
+  const [activePanel, setActivePanel] = useState<ActivePanel>(() => getDefaultPanel(day, completedTodos))
   const selectedPlan =
     day.weatherPlans?.find((plan) => plan.id === selectedPlanId) ?? day.weatherPlans?.[0]
+  const localFeatureGroups = useMemo(() => day.localFeatureGroups ?? [], [day.localFeatureGroups])
+  const featureCount = localFeatureGroups.reduce((total, group) => total + (group.cards?.length ?? 0), 0)
   const completedCount = day.todos.filter((todo) => completedTodos.includes(todoKey(day.id, todo))).length
-  const panelTargetIndex = activePanel === 'prep' ? 0 : 1
+  const panelTargetIndex = activePanel === 'prep' ? 0 : activePanel === 'route' ? 1 : 2
   const panelVisualIndex = useJellyIndex(panelTargetIndex)
   const planTargetIndex = Math.max(
     0,
@@ -59,6 +65,9 @@ export function DayDetailPage({
   }, [day.routeSteps.length])
   const panelIndicatorStyle = {
     transform: `translate3d(${panelVisualIndex * 100}%, 0, 0)`,
+  } as CSSProperties
+  const panelTabStyle = {
+    '--tab-count': 3,
   } as CSSProperties
   const planSwitchStyle = {
     '--tab-count': day.weatherPlans?.length ?? 1,
@@ -182,7 +191,7 @@ export function DayDetailPage({
         ) : null}
 
         <section className="day-panels" aria-label="当天信息切换">
-          <div className="content-tabs" role="tablist" aria-label={`Day ${day.day} 内容`}>
+          <div className="content-tabs" role="tablist" aria-label={`Day ${day.day} 内容`} style={panelTabStyle}>
             <span className="content-tab-indicator" style={panelIndicatorStyle} aria-hidden="true" />
             <button
               className={activePanel === 'prep' ? 'is-active' : ''}
@@ -193,7 +202,7 @@ export function DayDetailPage({
             >
               <ListChecks size={17} />
               出发前确认
-              <span>
+              <span className="tab-extra">
                 {completedCount}/{day.todos.length}
               </span>
             </button>
@@ -206,6 +215,17 @@ export function DayDetailPage({
             >
               <Route size={17} />
               今天怎么走
+            </button>
+            <button
+              className={activePanel === 'features' ? 'is-active' : ''}
+              type="button"
+              role="tab"
+              aria-selected={activePanel === 'features'}
+              onClick={() => setActivePanel('features')}
+            >
+              <Sparkles size={17} />
+              当地特色
+              {featureCount ? <span className="tab-extra">{featureCount}</span> : null}
             </button>
           </div>
 
@@ -320,6 +340,8 @@ export function DayDetailPage({
                 </article>
               </section>
             </div>
+          ) : activePanel === 'features' ? (
+            <LocalFeaturesPanel groups={localFeatureGroups} />
           ) : (
             <div className="panel-content" role="tabpanel">
               <section className="section-block prep-panel">
@@ -374,6 +396,96 @@ export function DayDetailPage({
         ) : null}
       </section>
     </main>
+  )
+}
+
+function LocalFeaturesPanel({ groups }: { groups: NonNullable<TripDay['localFeatureGroups']> }) {
+  const featureGroups = groups
+    .map((group) => ({
+      ...group,
+      cards: group.cards ?? [],
+    }))
+    .filter((group) => group.cards.length)
+
+  return (
+    <div className="panel-content" role="tabpanel">
+      <section className="section-block local-features-panel">
+        <div className="section-heading">
+          <div>
+            <span>Local</span>
+            <h2>当地特色</h2>
+          </div>
+          <div className="tiny-status">吃饭 / 景点 / 项目</div>
+        </div>
+
+        <div className="local-feature-groups">
+          {featureGroups.length ? (
+            featureGroups.map((group) => (
+              <section className="local-feature-group" key={group.id}>
+                <div className="local-feature-heading">
+                  <span>{group.eyebrow}</span>
+                  <h3>{group.title}</h3>
+                  {group.summary ? <p>{group.summary}</p> : null}
+                </div>
+                <div className="local-feature-list">
+                  {group.cards.map((card) => (
+                    <LocalFeatureCard card={card} key={card.id} />
+                  ))}
+                </div>
+              </section>
+            ))
+          ) : (
+            <p className="local-feature-empty">这一天的当地特色还没展开，先按“今天怎么走”执行。</p>
+          )}
+        </div>
+      </section>
+    </div>
+  )
+}
+
+function LocalFeatureCard({
+  card,
+}: {
+  card: LocalFeatureCardType
+}) {
+  const links = card.links ?? (card.link ? [card.link] : [])
+
+  return (
+    <article className="local-feature-card" data-feature-card-id={card.id}>
+      {card.image ? <img className="local-feature-image" src={card.image} alt={card.imageAlt ?? ''} /> : null}
+      <div className="local-feature-body">
+        <div className="local-feature-kicker">
+          {card.tag ? <span>{card.tag}</span> : null}
+          {card.subtitle ? <b>{card.subtitle}</b> : null}
+        </div>
+        <h4>{card.title}</h4>
+        {card.subtitle ? <strong>{card.subtitle}</strong> : null}
+        <p>{card.body}</p>
+
+        {card.tags?.length ? (
+          <div className="local-feature-facts">
+            {card.tags.map((fact) => (
+              <span key={fact}>{fact}</span>
+            ))}
+          </div>
+        ) : null}
+
+        {links.length ? (
+          <div className="local-feature-actions">
+            {links.map((link) => (
+              <button
+                type="button"
+                key={link.url}
+                onClick={() => window.open(link.url, '_blank', 'noopener,noreferrer')}
+              >
+                <span>{link.label}</span>
+                <ExternalLink size={14} />
+              </button>
+            ))}
+          </div>
+        ) : null}
+      </div>
+    </article>
   )
 }
 

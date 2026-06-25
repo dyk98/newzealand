@@ -67,6 +67,28 @@ export type WeatherPlan = {
   detail: string
 }
 
+export type LocalFeatureCard = {
+  id: string
+  title: string
+  subtitle?: string
+  image?: string
+  imageAlt?: string
+  body: string
+  tag?: string
+  tags?: string[]
+  link?: ContextLink
+  links?: ContextLink[]
+}
+
+export type LocalFeatureGroup = {
+  id: string
+  eyebrow: string
+  title: string
+  summary?: string
+  cards?: LocalFeatureCard[]
+  contextIds?: string[]
+}
+
 export type TripDay = {
   id: string
   date: string
@@ -87,6 +109,7 @@ export type TripDay = {
   note: string
   todos: string[]
   importantTip?: string
+  localFeatureGroups?: LocalFeatureGroup[]
   previewContextIds: string[]
   weatherPlans?: WeatherPlan[]
   tags: string[]

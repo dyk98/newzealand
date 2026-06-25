@@ -7,9 +7,11 @@ import {
   Circle,
   Flag,
   ListChecks,
+  MapPinned,
   Plane,
   ShieldCheck,
   Sparkles,
+  Utensils,
   WalletCards,
 } from 'lucide-react'
 import { criticalPrepItems, prepBudgetCards, todoGroups, tripDays } from '../data/tripData'
@@ -179,6 +181,9 @@ export function PrepPage({ completedTodoIds, onToggleTodo }: PrepPageProps) {
 function groupIcon(groupId: string) {
   if (groupId === 'stays') return <BedDouble size={20} />
   if (groupId === 'car') return <Car size={20} />
+  if (groupId === 'road') return <MapPinned size={20} />
+  if (groupId === 'cash') return <WalletCards size={20} />
+  if (groupId === 'food') return <Utensils size={20} />
   if (groupId === 'activities') return <Plane size={20} />
   if (groupId === 'documents') return <ShieldCheck size={20} />
   if (groupId === 'packing') return <BaggageClaim size={20} />

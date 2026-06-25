@@ -47,7 +47,7 @@ export function ItineraryListPage({ likedDays }: ItineraryListPageProps) {
                     {day.accommodation}
                   </span>
                   <span>
-                    <Car size={13} />
+                    <Clock size={13} />
                     {day.intensity}
                   </span>
                 </div>
