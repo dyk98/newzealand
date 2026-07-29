@@ -36,23 +36,25 @@
 
 ## 行程范围
 
-行程覆盖 `2026-09-24` 到 `2026-10-06`，共 13 天：
+行程覆盖 `2026-09-24` 到 `2026-10-08`，共 15 天：
 
 | Day | 日期 | 主线 |
 |---|---:|---|
 | 1 | 09.24 | 广州 -> 香港 -> 悉尼，包车到 HKG，QF128 红眼飞悉尼 |
 | 2 | 09.25 | 悉尼入境中转短游，晚上飞基督城 |
 | 3 | 09.26 | 基督城取车采购，经 Tekapo 到 Twizel |
-| 4 | 09.27 | Twizel -> Mt Cook -> Wanaka，Hooker Valley Track 天气决策日 |
-| 5 | 09.28 | Wanaka 湖边恢复、洗衣、补给 |
-| 6 | 09.29 | Wanaka -> Arrowtown -> Queenstown |
-| 7 | 09.30 | Queenstown 自由活动选择日 |
-| 8 | 10.01 | Queenstown -> Te Anau，Milford 前夜基地 |
-| 9 | 10.02 | Milford Sound Te Anau 出发大巴 + 游船一日团 |
-| 10 | 10.03 | Te Anau -> Queenstown，峡湾后缓冲 |
-| 11 | 10.04 | Queenstown -> Cromwell / Omarama -> Twizel / Tekapo |
-| 12 | 10.05 | Mackenzie 湖区返回基督城机场附近 |
-| 13 | 10.06 | 基督城还车，经墨尔本回香港 |
+| 4 | 09.27 | Twizel -> Mt Cook -> 回住 Twizel，Hooker Valley Track 天气决策日 |
+| 5 | 09.28 | Twizel -> Wanaka，把长开车从徒步日拆出 |
+| 6 | 09.29 | Wanaka 湖边恢复、洗衣、补给 |
+| 7 | 09.30 | Wanaka -> Arrowtown -> Queenstown |
+| 8 | 10.01 | Queenstown 自由活动选择日 |
+| 9 | 10.02 | Queenstown -> Te Anau，Milford 前夜基地 |
+| 10 | 10.03 | Milford Sound Te Anau 出发大巴 + 游船一日团 |
+| 11 | 10.04 | Te Anau -> Queenstown，峡湾后缓冲 |
+| 12 | 10.05 | Queenstown -> Cromwell / Omarama -> Twizel / Tekapo |
+| 13 | 10.06 | Mackenzie 湖区返回基督城，傍晚完成还车 |
+| 14 | 10.07 | 基督城飞悉尼，T1 过夜并按条件执行海港夜游 |
+| 15 | 10.08 | 悉尼飞香港，乘预订跨境包车返回广州 |
 
 ## 核心功能
 
@@ -68,14 +70,14 @@
 
 入口：`/#trip`
 
-- 按 Day 1 到 Day 13 展示日期、城市、摘要、住宿、强度和状态标签。
+- 按 Day 1 到 Day 15 展示日期、城市、摘要、住宿、强度和状态标签。
 - 标出早起、长交通、自由/恢复、必订项目等执行特征。
 - 内置南岛自驾路线图，支持放大查看。
 - 点击任意日期进入对应 Day 详情，例如 `/#day-4`。
 
 ### Day 详情
 
-入口：`/#day-1` 到 `/#day-13`
+入口：`/#day-1` 到 `/#day-15`
 
 每一天包含：
 
@@ -155,7 +157,7 @@
 
 主要改 `src/data/tripData.ts`：
 
-- `tripDays`：Day 1 到 Day 13 的标题、日期、路线、时间线、住宿、提醒、每日 checklist。
+- `tripDays`：Day 1 到 Day 15 的标题、日期、路线、时间线、住宿、提醒、每日 checklist。
 - `contextCards`：地点、航班、交通、餐饮、活动等弹窗资料。
 - `todoGroups`：行前准备分组和任务。
 - `prepBudgetCards` / `budgetCards`：预算摘要。

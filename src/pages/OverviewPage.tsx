@@ -13,8 +13,8 @@ export function OverviewPage({ completedTodoIds }: OverviewPageProps) {
   const progress = Math.round((completedPrepItems / Math.max(1, allPrepItems.length)) * 100)
   const stayBudget = prepBudgetCards.find((card) => card.label === '住宿控制目标')?.value ?? 'NZ$5500-7200'
   const stats = [
-    { label: '旅行天数', value: '13 天', note: '09.24-10.06' },
-    { label: '南岛自驾', value: '11 天', note: '基督城取还车' },
+    { label: '旅行天数', value: '15 天', note: '09.24-10.08' },
+    { label: '南岛自驾', value: '11 天', note: '09.26-10.06' },
     { label: '准备进度', value: `${progress}%`, note: `${completedPrepItems}/${allPrepItems.length} 项完成` },
     { label: '住宿目标', value: stayBudget, note: '四人全程' },
   ]
@@ -26,8 +26,8 @@ export function OverviewPage({ completedTodoIds }: OverviewPageProps) {
           <img src="/trip-media/lake-pukaki-mt-cook.jpg" alt="新西兰湖泊和雪山路线总览" />
           <div className="overview-hero-content">
             <span>2026 国庆新西兰行</span>
-            <h1>13 天南岛自驾路书</h1>
-            <p>09.24 广州出发，经香港、悉尼、基督城，完成南岛自驾主线。</p>
+            <h1>15 天 14 晚新西兰路书</h1>
+            <p>09.24 从广州出发，完成南岛自驾后经悉尼过夜，10.08 从香港乘跨境包车返回广州。</p>
           </div>
         </section>
 

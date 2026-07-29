@@ -111,7 +111,7 @@ NewZealand 是一个给 2026 国庆新西兰同行人使用的手机端旅行路
 
 应展示：
 
-- Day 1 到 Day 13。
+- Day 1 到 Day 15。
 - 日期、城市、路线摘要。
 - 驾驶强度。
 - 是否早起。
@@ -155,7 +155,7 @@ NewZealand 是一个给 2026 国庆新西兰同行人使用的手机端旅行路
 
 - Queenstown 活动选项。
 - Onsen / Skyline / Glenorchy / 蒸汽船等可选项目。
-- 悉尼中转路线 A / C。
+- 悉尼过夜海港夜游 / 机场酒店休息方案。
 - Twizel vs Tekapo 住宿选择。
 - Crown Range vs Cromwell 路线选择。
 

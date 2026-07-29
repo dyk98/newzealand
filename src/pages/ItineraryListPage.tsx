@@ -15,7 +15,7 @@ export function ItineraryListPage({ likedDays }: ItineraryListPageProps) {
           <img src="/trip-media/lake-wanaka.jpg" alt="新西兰湖边行程列表背景" />
           <div className="overview-hero-content">
             <span>Itinerary</span>
-            <h1>09.24-10.06 全部行程</h1>
+            <h1>09.24-10.08 全部行程</h1>
             <p>先看每天节奏，再点进具体日期。重点日、早起日、长途交通日和恢复日都已标出来。</p>
           </div>
         </header>
