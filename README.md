@@ -40,19 +40,19 @@
 
 | Day | 日期 | 主线 |
 |---|---:|---|
-| 1 | 09.24 | 广州 -> 香港 -> 悉尼，包车到 HKG，QF128 红眼飞悉尼 |
-| 2 | 09.25 | 悉尼入境中转短游，晚上飞基督城 |
+| 1 | 09.24 | 广州 -> 香港 -> 墨尔本，包车到 HKG，20:05 红眼飞 MEL |
+| 2 | 09.25 | 墨尔本入境取行李并寄存，CBD 轻量短游，18:40 飞基督城 |
 | 3 | 09.26 | 基督城取车采购，经 Tekapo 到 Twizel |
 | 4 | 09.27 | Twizel -> Mt Cook -> 回住 Twizel，Hooker Valley Track 天气决策日 |
 | 5 | 09.28 | Twizel -> Wanaka，把长开车从徒步日拆出 |
 | 6 | 09.29 | Wanaka 湖边恢复、洗衣、补给 |
 | 7 | 09.30 | Wanaka -> Arrowtown -> Queenstown |
-| 8 | 10.01 | Queenstown 自由活动选择日 |
+| 8 | 10.01 | Queenstown Hydro Attack 鲨鱼艇 + Skyline 缆车 / Luge |
 | 9 | 10.02 | Queenstown -> Te Anau，Milford 前夜基地 |
 | 10 | 10.03 | Milford Sound Te Anau 出发大巴 + 游船一日团 |
 | 11 | 10.04 | Te Anau -> Queenstown，峡湾后缓冲 |
-| 12 | 10.05 | Queenstown -> Cromwell / Omarama -> Twizel / Tekapo |
-| 13 | 10.06 | Mackenzie 湖区返回基督城，傍晚完成还车 |
+| 12 | 10.05 | Queenstown -> Cromwell / Omarama -> Tekapo，Twizel 仅作安全降级 |
+| 13 | 10.06 | Tekapo 返回基督城，傍晚完成还车 |
 | 14 | 10.07 | 基督城飞悉尼，T1 过夜并按条件执行海港夜游 |
 | 15 | 10.08 | 悉尼飞香港，乘预订跨境包车返回广州 |
 
@@ -105,7 +105,7 @@
 
 入口：`/#todos`
 
-- 汇总最关键准备事项：澳洲签证、新西兰 NZeTA + IVL。
+- 汇总最关键准备事项：澳签批准信归档、新西兰 NZeTA + IVL。
 - 统计行前准备总进度。
 - 按类别组织 checklist：
   - 住宿预订
@@ -145,7 +145,8 @@
 | `src/types/trip.ts` | 路书数据结构类型 |
 | `src/content/itinerary.md` | 原始路书内容存档 |
 | `public/trip-media/` | 新西兰主题图片和路线图 |
-| `public/itinerary-media/` | 原始路书图片 |
+| `docs/archive/obsolete-flight-and-word-images/` | 已退出线上展示的旧航班截图与 Word 抽图，仅保留回溯 |
+| `docs/archive/unused-trip-media/` | 已替换或不再使用的旅行图片，仅保留回溯 |
 | `docs/design-guidelines.md` | 产品/视觉设计方向 |
 | `docs/readme/` | README 截图 |
 | `scripts/deploy-cloudflare.sh` | Cloudflare Pages 一键发布脚本 |
@@ -169,7 +170,7 @@
 公共图片放在 `public/` 下，代码中用根路径引用，例如：
 
 ```ts
-const routeMapImage = '/trip-media/south-island-route-map.png'
+const routeMapImage = '/trip-media/south-island-route-diagram.svg'
 ```
 
 新图片需要同步更新来源说明，尤其是 `public/trip-media/README.md`。如果替换路线图，也要检查 `RouteMapCard` 和 README 截图是否需要重截。

@@ -107,43 +107,122 @@ Open image assets used by the itinerary app.
   - URL: https://commons.wikimedia.org/wiki/File:Milford_Sound_in_Fiordland_National_Park_01.jpg
   - Usage: Milford Sound day hero and cruise cards.
 
-- `te-anau.jpg`
-  - Source: Wikimedia Commons, `Lake Te Anau, New Zealand.jpg`
-  - URL: https://commons.wikimedia.org/wiki/File:Lake_Te_Anau,_New_Zealand.jpg
+- `lake-te-anau-modern.jpg`
+  - Source: Wikimedia Commons, `Lake Te Anau3.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Lake_Te_Anau3.jpg
+  - Author / license: russellstreet, CC BY-SA 2.0.
   - Usage: Te Anau place card and Te Anau day cards.
 
 - `fairlie.jpg`
-  - Source: Wikimedia Commons (Fairlie townscape)
+  - Source: Wikimedia Commons, `Fairlie, Main Street.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Fairlie,_Main_Street.jpg
+  - Author / license: Ulrich Lange, CC BY 3.0 / GFDL.
   - Usage: Day 3 / Day 13 Fairlie stop cards.
 
-- `geraldine.jpg`
-  - Source: Wikimedia Commons (Geraldine streetscape)
+- `geraldine-main-street-003.jpg`
+  - Source: Wikimedia Commons, `Geraldine Main Street 003.JPG`
+  - URL: https://commons.wikimedia.org/wiki/File:Geraldine_Main_Street_003.JPG
+  - Author / license: Mattinbgn, CC BY 3.0.
   - Usage: Geraldine / Fairlie place and lunch cards.
 
 - `ashburton.jpg`
-  - Source: Wikimedia Commons (Ashburton)
+  - Source: Wikimedia Commons, `Ashburton Clock Tower.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Ashburton_Clock_Tower.jpg
+  - Author / license: itravelNZ, CC BY 2.0.
   - Usage: Ashburton stop and Day 13 return food plan.
 
-- `crown-range.jpg`
-  - Source: Wikimedia Commons (Crown Range Road)
+- `crown-range-road-nz.jpg`
+  - Source: Wikimedia Commons, `Crown Range Road NZ.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Crown_Range_Road_NZ.jpg
+  - Author / license: Moriori, CC BY-SA 3.0.
   - Usage: Wanaka→Queenstown drive / Crown Range cards.
-
-- `tss-earnslaw.jpg`
-  - Source: Wikimedia Commons (TSS Earnslaw)
-  - Usage: TSS Earnslaw booking and Day 8 boat cards.
 
 - `glenorchy.jpg`
   - Source: Wikimedia Commons, `Glenorchy_at_the_Head_of_Lake_Wakatipu.jpg`
   - URL: https://commons.wikimedia.org/wiki/File:Glenorchy_at_the_Head_of_Lake_Wakatipu.jpg
-  - Usage: Glenorchy place and Day 8 optional half-day cards.
+  - Usage: Glenorchy reference card only; Glenorchy is not in the fixed itinerary.
 
-- `hkia.jpg`
-  - Source: Wikimedia Commons (Hong Kong International Airport)
+- `hkia-t1-level7-2025.jpg`
+  - Source: Wikimedia Commons, `Hong Kong International Airport Terminal 1 Level 7 29-10-2025(1).jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Hong_Kong_International_Airport_Terminal_1_Level_7_29-10-2025(1).jpg
+  - Author / license: LN9267, CC BY-SA 4.0.
   - Usage: HKG airport and Guangzhou↔HKG transfer cards.
 
-- `tekapo-lake.jpg` / `tekapo-church.jpg`
-  - Source: Wikimedia Commons (Lake Tekapo / Church of the Good Shepherd)
-  - Usage: Tekapo place and Day 3 / Day 12 Tekapo cards.
+- `lake-tekapo-spring.jpg`
+  - Source: Wikimedia Commons, `Lake Tekapo on a fine spring day.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Lake_Tekapo_on_a_fine_spring_day.jpg
+  - Author / license: Paul Stewart, CC0 1.0.
+  - Usage: Tekapo place and Day 3 / Day 12 lake cards.
 
-- `south-island-route-map.png`
-  - Usage: South Island driving guide; temporary stand-in for Christchurch city cards until a CHC place photo is added.
+- `tekapo-good-shepherd-2025.jpg`
+  - Source: Wikimedia Commons, `Church of the Good Shepherd at Lake Tekapo.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Church_of_the_Good_Shepherd_at_Lake_Tekapo.jpg
+  - Author / license: Pseudopanax, public domain.
+  - Usage: Church of the Good Shepherd cards.
+
+- `christchurch-airport-2020.jpg`
+  - Source: Wikimedia Commons, `CHC Airport Overview 2020 (cropped).jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:CHC_Airport_Overview_2020_(cropped).jpg
+  - Author / license: TheDomino247, CC BY-SA 4.0.
+  - Usage: Christchurch Airport, rental return and transit-hotel cards.
+
+- `south-island-route-diagram.svg`
+  - Source: Original schematic drawn for this app from the fixed itinerary sequence.
+  - Note: Route diagram only; not a geographic map and not to scale.
+  - Usage: South Island driving overview.
+
+- `melbourne-flinders-street.jpg`
+  - Source: Wikimedia Commons, `Flinders Street Station, Melbourne, Australia.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Flinders_Street_Station,_Melbourne,_Australia.jpg
+  - Author / license: Doug Beckers, CC BY-SA 2.0.
+  - Usage: Day 1 / Day 2 Melbourne hero, airport transit and Flinders Street cards.
+
+- `melbourne-queen-victoria-market.jpg`
+  - Source: Wikimedia Commons, `Queen Victoria Market View 201708.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Queen_Victoria_Market_View_201708.jpg
+  - Author / license: Wpcpey, CC BY-SA 4.0.
+  - Usage: Day 2 Queen Victoria Market context and breakfast cards.
+
+- `melbourne-state-library.jpg`
+  - Source: Wikimedia Commons, `State Library of Victoria La Trobe Reading room 5th floor view.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:State_Library_of_Victoria_La_Trobe_Reading_room_5th_floor_view.jpg
+  - Author / license: DAVID ILIFF, CC BY-SA 3.0.
+  - Usage: Day 2 State Library Victoria and La Trobe Reading Room cards.
+
+- `melbourne-hosier-lane.jpg`
+  - Source: Wikimedia Commons, `Hosier Lane Melbourne. (47940124773).jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Hosier_Lane_Melbourne._(47940124773).jpg
+  - Author / license: Bernard Spragg. NZ, CC0 1.0.
+  - Usage: Day 2 Melbourne arcades, laneways and Hosier Lane cards.
+
+- `sydney-airport-t1.jpg`
+  - Source: Wikimedia Commons, `Sydney Airport Terminal 1.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Sydney_Airport_Terminal_1.jpg
+  - Author / license: Maksym Kozlenko, CC BY-SA 4.0.
+  - Usage: Sydney Airport, T1 hotel and Day 14 / Day 15 transfer cards.
+
+- `sydney-harbour-bridge-night.jpg`
+  - Source: Wikimedia Commons, `Sydney Harbour Bridge night.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Sydney_Harbour_Bridge_night.jpg
+  - Author / license: Diliff, CC BY-SA 3.0.
+  - Usage: Sydney night-route hero and Circular Quay cards.
+
+- `sydney-harbour-bridge-close-night.jpg`
+  - Source: Wikimedia Commons, `Sydney Harbour Bridge. (18194149163).jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Sydney_Harbour_Bridge._(18194149163).jpg
+  - Author / license: Bernard Spragg. NZ, CC0 1.0.
+  - Usage: Sydney Harbour Bridge detail cards.
+
+- `sydney-opera-house-night.jpg`
+  - Source: Wikimedia Commons, `Sydney Opera House at night.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_at_night.jpg
+  - Author / license: Eumaeus, public domain.
+  - Usage: Sydney Opera House night-stop cards.
+
+- `sydney-the-rocks.jpg`
+  - Source: Wikimedia Commons, `The Rocks Sydney. (21469793066).jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:The_Rocks_Sydney._(21469793066).jpg
+  - Author / license: Bernard Spragg. NZ, CC0 1.0.
+  - Usage: The Rocks reference and night-route cards; photograph is a daytime location reference.
+
+Assets moved to `docs/archive/` are retained only for provenance or rollback and are not served by the app.

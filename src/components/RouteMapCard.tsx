@@ -5,9 +5,9 @@ type RouteMapCardProps = {
   compact?: boolean
 }
 
-const routeMapImage = '/trip-media/south-island-route-map.png'
+const routeMapImage = '/trip-media/south-island-route-diagram.svg'
 const routeSummary =
-  'Christchurch → Tekapo → Twizel → Mt Cook → Wanaka → Arrowtown → Queenstown → Te Anau → Milford Sound → Queenstown → Cromwell → Omarama → Tekapo / Twizel → Christchurch'
+  'Christchurch → Tekapo → Twizel ⇄ Mt Cook → Wanaka → Arrowtown → Queenstown → Te Anau ⇄ Milford Sound → Queenstown → Cromwell → Omarama →（Pukaki 条件性短停）→ Tekapo → Christchurch'
 
 export function RouteMapCard({ compact = false }: RouteMapCardProps) {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,7 +24,7 @@ export function RouteMapCard({ compact = false }: RouteMapCardProps) {
     <>
       <section className={`route-map-card ${compact ? 'is-compact' : ''}`} aria-label="本次南岛自驾路线图">
         <button className="route-map-preview" type="button" onClick={openMap}>
-          <img src={routeMapImage} alt="2026 国庆新西兰南岛自驾路线手绘图" />
+          <img src={routeMapImage} alt="按行程顺序绘制的南岛自驾示意图，不按地理比例" />
           <span className="route-map-expand">
             <Maximize2 size={16} />
             放大
@@ -52,7 +52,7 @@ export function RouteMapCard({ compact = false }: RouteMapCardProps) {
             <button className="route-map-modal-close" type="button" aria-label="关闭路线图" onClick={closeMap}>
               <X size={19} />
             </button>
-            <img className="route-map-modal-image" src={routeMapImage} alt="放大版 2026 国庆新西兰南岛自驾路线手绘图" />
+            <img className="route-map-modal-image" src={routeMapImage} alt="放大版南岛自驾行程顺序示意图，不按地理比例" />
           </article>
         </div>
       ) : null}
