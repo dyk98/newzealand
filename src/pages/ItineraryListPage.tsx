@@ -1,4 +1,4 @@
-import { BedDouble, CalendarDays, Car, Clock, ListChecks, Sparkles } from 'lucide-react'
+import { BedDouble, CalendarDays, Car, Clock, CloudSun, ListChecks, Sparkles } from 'lucide-react'
 import { RouteMapCard } from '../components/RouteMapCard'
 import { tripDays } from '../data/tripData'
 import { openAppHash } from '../utils/storage'
@@ -52,6 +52,10 @@ export function ItineraryListPage({ likedDays }: ItineraryListPageProps) {
                   </span>
                 </div>
                 <div className="status-chip-row">
+                  <strong className="is-temperature">
+                    <CloudSun size={12} />
+                    气温 {day.temperature}
+                  </strong>
                   {day.early ? (
                     <strong>
                       <Clock size={12} />

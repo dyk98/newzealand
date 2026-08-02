@@ -58,7 +58,7 @@ export function OverviewPage({ completedTodoIds }: OverviewPageProps) {
             <BaggageClaim size={24} />
             <span>准备</span>
             <strong>处理行前清单</strong>
-            <p>住宿、租车、活动、证件保险和携带物品集中确认。</p>
+            <p>住宿、租车、活动、证件和携带物品集中确认。</p>
           </button>
         </section>
       </section>

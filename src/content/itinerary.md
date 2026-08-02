@@ -8,7 +8,7 @@
 
 ## 最重要的准备
 打印并离线保存四人澳洲签证批准信（均已获批）
-申请新西兰免签证明（NZeTA + IVL）
+打印并离线保存四人 NZeTA 确认邮件（均已获批）
 填写四人 NZTD（New Zealand Traveller Declaration / 新西兰旅行者申报）
 
 ## 需要预定的东西
@@ -58,13 +58,12 @@ Milford Sound 当前费用参考：NZ$249 / 人起，四人 NZ$996 起；不升�
 Queenstown 已确定四人全部参加 Hydro Attack + Skyline / Luge，不安排蹦极、跳伞、峡谷秋千、TSS 或 Glenorchy。
 按上述当前起价，Milford + Hydro Attack + Skyline 四人参考合计 NZ$2,188 起，约 RMB 8,752 起；此合计暂未加入 Cardrona，滑雪日只在补入实际订单金额后计入总预算，不虚构已付金额
 
-### 签证 / 证件 / 保险
+### 签证 / 证件
 澳洲签证：四人均已获批，按 AUD 250 / 人计，四人合计 AUD 1,000；按预算汇率折合约 RMB 4,800，即约 RMB 1,200 / 人。只需打印并离线保存批准信；路书按 09.25 墨尔本与 10.07 悉尼两次入境执行。
-NZeTA 尚未办理：出发前完成四人申请，并随申请支付 IVL（International Visitor Conservation and Tourism Levy / 国际游客保护与旅游税）。
-NZeTA 与 IVL 合计：官方 App 申请 NZ$117 / 人（NZeTA NZ$17 + IVL NZ$100），官网申请 NZ$123 / 人（NZeTA NZ$23 + IVL NZ$100）；四人分别为 NZ$468 或 NZ$492
+NZeTA 已获批：四人均已通过官方 App 完成申请并支付 IVL（International Visitor Conservation and Tourism Levy / 国际游客保护与旅游税）；出发前只需分别打印并离线保存确认邮件。
+NZeTA 与 IVL 实际支出：NZ$117 / 人（NZeTA NZ$17 + IVL NZ$100），四人合计 NZ$468。
 NZTD 尚未填写：这是每位旅客入境新西兰前单独提交的免费申报，与 NZeTA 不是同一件事。本次在墨尔本入境并取出行李，按 MEL→CHC 2026.09.25 18:40 起飞计算，最早可在 09.24 18:40 墨尔本时间（中国时间 16:40）提交。四人可在 09.24 17:00 抵达 HKG 后办理，建议 MEL 登机前全部完成，无需打印。
 06.01–06.30 办理驾照英文翻译件或 IDP：约 RMB 100–300 / 人
-06.15–07.15 购买境外旅行保险：4 人约 RMB 800–2,000
 
 ### 现金 / 支付
 出发前换少量新西兰币现金：建议 NZD 500 左右，约 RMB 1,900–2,000，作为全队备用现金，不需要大量换。
@@ -289,7 +288,7 @@ To-do：
 根据滑雪后恢复情况决定是否在 07:45 短看 That Wanaka Tree，不影响 10:00 退房。
 确认酒店停车位和前往 Queenstown 市中心的交通方式。
 出发前查 NZTA Journey Planner，决定 Crown Range 还是 Cromwell 方向。
-向租车公司确认是否提供匹配车型和轮胎尺寸的雪链、是否允许自行安装，并在出发前学会安装；没有合适雪链就不走 Crown Range。
+联系租车公司取得书面回复：确认实际交付车辆随车提供与最终轮胎尺寸匹配的雪链、合同允许使用、安装车轮位置，以及费用与损坏条款；提车时让工作人员示范并实际练习。没有合适雪链就不走 Crown Range。
 提前在 Google Maps 标记 Arrowtown 午餐 / 咖啡备选、厕所和停车点。
 
 # 10.01 Day 8（第 8 天）Queenstown Hydro Attack、Skyline

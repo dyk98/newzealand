@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   ChevronDown,
   Circle,
+  CloudSun,
   Clock3,
   Flag,
   ListChecks,
@@ -166,6 +167,7 @@ export function PrepPage({ completedTodoIds, onToggleTodo }: PrepPageProps) {
                   <p>路况、现金、餐饮和打包仍保留，按需展开处理。</p>
                 </div>
               </div>
+              <PrepWeatherClothingDisclosure />
               <PrepGroupList
                 groups={checklistGroups}
                 completedSet={completedSet}
@@ -233,7 +235,7 @@ function PrepTimingCard() {
       <div className="prep-timing-grid">
         <article>
           <b>离家前完成</b>
-          <p>尽早完成必要预订、NZeTA、证件保险和酒店 / 交通书面确认，不把审批拖到出发前一天。</p>
+          <p>尽早完成必要预订、证件整理和酒店 / 交通书面确认，不把行前准备拖到出发前一天。</p>
         </article>
         <article className="is-departure-day">
           <b>09.24 出发当天</b>
@@ -369,6 +371,77 @@ function PrepItemButton({
         </span>
       </span>
     </button>
+  )
+}
+
+function PrepWeatherClothingDisclosure() {
+  const weatherSegments = [
+    {
+      dates: '09.25',
+      place: '墨尔本',
+      range: '约 7–17°C',
+      clothing: '长袖或薄底层加抓绒；有风雨时套防水外壳。',
+    },
+    {
+      dates: '09.26–10.07',
+      place: '南岛城镇',
+      range: '约 0–17°C',
+      clothing: '早晚和午后差异大，按底层、抓绒、薄羽绒、外壳逐层增减。',
+    },
+    {
+      dates: 'Mt Cook / Cardrona',
+      place: '高山活动',
+      range: '按 -5–8°C 体感准备',
+      clothing: '风寒可能更低；加保暖打底、帽子、脖套、防水手套和厚袜。',
+      alpine: true,
+    },
+    {
+      dates: '10.07–10.08',
+      place: '悉尼',
+      range: '约 13–23°C',
+      clothing: '短袖或长袖加薄外套；夜间海风或下雨时加外壳。',
+    },
+  ]
+
+  return (
+    <details className="prep-weather-disclosure">
+      <summary>
+        <span className="todo-group-icon">
+          <CloudSun size={20} />
+        </span>
+        <span>
+          <small>Weather & layers</small>
+          <strong>澳新温度与分层穿衣</strong>
+          <em>历史常态与高山体感，仅作打包参考</em>
+        </span>
+        <b>-5–23°C</b>
+        <ChevronDown size={18} aria-hidden="true" />
+      </summary>
+
+      <div className="prep-weather-content">
+        <p className="prep-weather-caveat">
+          <strong>这是澳洲与新西兰段的打包温度带，不是 2026 年天气预报。</strong>
+          出发前 7 天再看逐地预报，南岛每天出发前复查天气与路况。
+        </p>
+        <div className="prep-weather-segments">
+          {weatherSegments.map((segment) => (
+            <article className={segment.alpine ? 'is-alpine' : undefined} key={`${segment.dates}-${segment.place}`}>
+              <span>{segment.dates}</span>
+              <div>
+                <strong>
+                  {segment.place}｜{segment.range}
+                </strong>
+                <p>{segment.clothing}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="prep-layer-formula">
+          <strong>一套分层覆盖全程</strong>
+          <p>短袖 / 长袖速干底层 → 抓绒 → 薄羽绒 → 带帽防风防水外壳；下身穿长裤，雪山再加保暖打底。</p>
+        </div>
+      </div>
+    </details>
   )
 }
 

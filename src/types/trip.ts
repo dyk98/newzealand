@@ -116,6 +116,7 @@ export type TripDay = {
   title: string
   shortTitle: string
   cities: string
+  temperature: string
   summary: string
   heroImage: string
   heroAlt: string

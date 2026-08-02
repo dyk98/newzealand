@@ -118,6 +118,10 @@ export function DayDetailPage({
             <div className="day-pill">
               <CalendarDays size={15} />
               {day.date} Day {day.day}
+              <span className="day-temperature-reference" aria-label={`历史气温参考 ${day.temperature}`}>
+                <CloudSun size={14} aria-hidden="true" />
+                {day.temperature}
+              </span>
             </div>
             <h1>
               <span>{day.shortTitle}</span>
