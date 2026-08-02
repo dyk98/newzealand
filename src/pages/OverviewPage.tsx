@@ -1,22 +1,27 @@
 import { BaggageClaim, Map as MapIcon } from 'lucide-react'
-import { prepBudgetCards, todoGroups } from '../data/tripData'
+import { criticalPrepItems, prepBudgetCards, todoGroups } from '../data/tripData'
 import { openAppHash } from '../utils/storage'
 
 type OverviewPageProps = {
   completedTodoIds: string[]
 }
 
+const corePrepGroupIds = new Set(['stays', 'car', 'transit', 'activities', 'documents'])
+
 export function OverviewPage({ completedTodoIds }: OverviewPageProps) {
-  const allPrepItems = todoGroups.flatMap((group) => group.items)
+  const allPrepItems = [
+    ...criticalPrepItems,
+    ...todoGroups.filter((group) => corePrepGroupIds.has(group.id)).flatMap((group) => group.items),
+  ]
   const prepItemIds = new Set(allPrepItems.map((item) => item.id))
   const completedPrepItems = completedTodoIds.filter((todoId) => prepItemIds.has(todoId)).length
   const progress = Math.round((completedPrepItems / Math.max(1, allPrepItems.length)) * 100)
-  const stayBudget = prepBudgetCards.find((card) => card.label === '住宿控制目标')?.value ?? 'NZ$5500-7200'
+  const stayBudget = prepBudgetCards.find((card) => card.label === '住宿已订合计')?.value ?? '¥25,678.76'
   const stats = [
     { label: '旅行天数', value: '15 天', note: '09.24-10.08' },
     { label: '南岛自驾', value: '11 天', note: '09.26-10.06' },
-    { label: '准备进度', value: `${progress}%`, note: `${completedPrepItems}/${allPrepItems.length} 项完成` },
-    { label: '住宿目标', value: stayBudget, note: '四人全程' },
+    { label: '核心准备', value: `${progress}%`, note: `${completedPrepItems}/${allPrepItems.length} 项完成` },
+    { label: '住宿已订', value: stayBudget, note: '9 个时段 / 13 个酒店夜' },
   ]
 
   return (

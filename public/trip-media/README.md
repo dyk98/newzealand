@@ -52,6 +52,13 @@ Open image assets used by the itinerary app.
   - URL: https://commons.wikimedia.org/wiki/File:Wanaka_tree.jpg
   - Usage: Wanaka detail gallery.
 
+- `cardrona-captains-basin.jpg`
+  - Source: Wikimedia Commons, `Captains Basin view at Cadrona Skifield.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Captains_Basin_view_at_Cadrona_Skifield.jpg
+  - Author / license: André Richard Chalmers, CC BY-SA 3.0.
+  - Note: Real Cardrona Alpine Resort photo taken in 2013; it identifies Captains Basin but does not represent snow or trail conditions on 2026-09-29.
+  - Usage: Day 6 Cardrona hero, ski-plan context and logistics cards.
+
 - `lindis-pass.jpg`
   - Source: Wikimedia Commons, `Lindis Pass (Unsplash).jpg`
   - URL: https://commons.wikimedia.org/wiki/File:Lindis_Pass_(Unsplash).jpg
@@ -166,10 +173,34 @@ Open image assets used by the itinerary app.
   - Author / license: TheDomino247, CC BY-SA 4.0.
   - Usage: Christchurch Airport, rental return and transit-hotel cards.
 
-- `south-island-route-diagram.svg`
-  - Source: Original schematic drawn for this app from the fixed itinerary sequence.
-  - Note: Route diagram only; not a geographic map and not to scale.
-  - Usage: South Island driving overview.
+- `christchurch-arts-centre.jpg`
+  - Source: Wikimedia Commons, `Christchurch Arts Centre, Christchurch, New Zealand.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Christchurch_Arts_Centre,_Christchurch,_New_Zealand.jpg
+  - Author / license: Michal Klajban (Podzemnik), CC BY-SA 4.0.
+  - Usage: Day 13 hero, Arts Centre and Christchurch city-route cards.
+
+- `christchurch-botanic-gardens.jpg`
+  - Source: Wikimedia Commons, `Peacock Fountain in Christchurch Botanic Gardens.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Peacock_Fountain_in_Christchurch_Botanic_Gardens.jpg
+  - Author / license: Krzysztof Golik, CC BY-SA 4.0.
+  - Usage: Day 13 Botanic Gardens card.
+
+- `christchurch-new-regent-street.jpg`
+  - Source: Wikimedia Commons, `New Regent Street. Christchurch. NZ. (49312698126).jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:New_Regent_Street._Christchurch._NZ._(49312698126).jpg
+  - Author / license: Bernard Spragg. NZ, CC0 1.0.
+  - Usage: Day 13 New Regent Street and central-city architecture cards.
+
+- `christchurch-riverside-market.jpg`
+  - Source: Wikimedia Commons, `Riverside2024 upstairs cantina.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Riverside2024_upstairs_cantina.jpg
+  - Author / license: David Palmer (Cloventt), CC BY-SA 4.0.
+  - Usage: Day 13 Riverside Market lunch and Christchurch city-route cards.
+
+- `south-island-route-map-watercolor.png`
+  - Source: Custom watercolor route artwork supplied and approved for this app.
+  - Note: Route order only; Cardrona is a Wanaka day return, and Milford Sound uses the RealNZ coach + cruise rather than self-driving.
+  - Usage: South Island route overview and driving-guide context card.
 
 - `melbourne-flinders-street.jpg`
   - Source: Wikimedia Commons, `Flinders Street Station, Melbourne, Australia.jpg`
@@ -195,11 +226,35 @@ Open image assets used by the itinerary app.
   - Author / license: Bernard Spragg. NZ, CC0 1.0.
   - Usage: Day 2 Melbourne arcades, laneways and Hosier Lane cards.
 
+- `melbourne-royal-arcade.jpg`
+  - Source: Wikimedia Commons, `Melbourne Royal Arcade central hall seen from the south.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Melbourne_Royal_Arcade_central_hall_seen_from_the_south.jpg
+  - Author / license: Ymblanter, CC BY-SA 4.0.
+  - Usage: Day 2 Royal Arcade context and local-feature cards.
+
+- `melbourne-block-arcade.jpg`
+  - Source: Wikimedia Commons, `The Block Arcade interior, Melbourne.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:The_Block_Arcade_interior,_Melbourne.jpg
+  - Author / license: jwbenwell, CC BY-SA 2.0.
+  - Usage: Day 2 Block Arcade local-feature card.
+
+- `melbourne-degraves-street.jpg`
+  - Source: Wikimedia Commons, `AUS Melbourne, Central Business District, Degraves Street 001.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:AUS_Melbourne,_Central_Business_District,_Degraves_Street_001.jpg
+  - Author / license: -wuppertaler, CC BY 4.0.
+  - Usage: Day 2 Centre Place / Degraves Street coffee and food cards.
+
+- `melbourne-yarra-river.jpg`
+  - Source: Wikimedia Commons, `Melbourne Yarra River seen from Princes Bridge to the west.jpg`
+  - URL: https://commons.wikimedia.org/wiki/File:Melbourne_Yarra_River_seen_from_Princes_Bridge_to_the_west.jpg
+  - Author / license: Ymblanter, CC BY-SA 4.0.
+  - Usage: Day 2 Princes Bridge and Southbank river-view cards.
+
 - `sydney-airport-t1.jpg`
   - Source: Wikimedia Commons, `Sydney Airport Terminal 1.jpg`
   - URL: https://commons.wikimedia.org/wiki/File:Sydney_Airport_Terminal_1.jpg
   - Author / license: Maksym Kozlenko, CC BY-SA 4.0.
-  - Usage: Sydney Airport, T1 hotel and Day 14 / Day 15 transfer cards.
+  - Usage: Sydney Airport and Day 14 / Day 15 transfer cards.
 
 - `sydney-harbour-bridge-night.jpg`
   - Source: Wikimedia Commons, `Sydney Harbour Bridge night.jpg`

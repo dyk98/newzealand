@@ -15,7 +15,9 @@ export function writeStoredState<T>(key: string, value: T) {
 }
 
 export function openAppHash(hash: string) {
-  window.open(`${window.location.origin}${window.location.pathname}#${hash}`, '_blank', 'noopener,noreferrer')
+  const nextHash = hash.replace(/^#/, '')
+  if (window.location.hash.replace(/^#/, '') === nextHash) return
+  window.location.hash = nextHash
 }
 
 export function openExternalLink(url: string) {

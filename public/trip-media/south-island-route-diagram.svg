@@ -95,7 +95,7 @@
     <circle cx="584" cy="500" r="34" fill="#246b5a"/>
     <text x="584" y="506" class="day" text-anchor="middle">D11</text>
     <text x="635" y="493" class="nodeTitle">Queenstown 皇后镇</text>
-    <text x="635" y="523" class="nodeNote">返程缓冲 · Onsen 可选</text>
+    <text x="635" y="523" class="nodeNote">Milford 后恢复缓冲</text>
   </g>
   <g>
     <circle cx="584" cy="635" r="34" fill="#246b5a"/>
@@ -126,7 +126,7 @@
     <rect width="852" height="218" rx="26" fill="#f5f8f6" stroke="#d9e6e0" stroke-width="2"/>
     <text x="28" y="44" class="phase">执行边界</text>
     <circle cx="40" cy="80" r="7" fill="#246b5a"/>
-    <text x="60" y="87" class="small">Tekapo 是 Day 12 住宿主方案；Twizel 仅作安全降级</text>
+    <text x="60" y="87" class="small">Day 12 住宿固定为已预订的 Tekapo；延误时取消途中停靠</text>
     <circle cx="40" cy="118" r="7" fill="#c8832c"/>
     <text x="60" y="125" class="small">Lake Pukaki 只在天气、能见度和进度都合适时短停</text>
     <circle cx="40" cy="156" r="7" fill="#168aa0"/>

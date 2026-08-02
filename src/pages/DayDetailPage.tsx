@@ -411,15 +411,16 @@ function PrepReviewChecks({ checks }: { checks: ReviewCheck[] }) {
   return (
     <section className="review-checks" aria-label="临近复查">
       <div className="review-checks-heading">
-        <span>Review</span>
         <h3>临近复查</h3>
       </div>
       <div className="review-check-list">
         {checks.map((check) => (
-          <article className="review-check-card" key={check.id}>
-            <div className="review-check-time">{check.timing}</div>
+          <details className="review-check-card" key={check.id}>
+            <summary>
+              <span className="review-check-time">{check.timing}</span>
+              <strong>{check.title}</strong>
+            </summary>
             <div className="review-check-body">
-              <h4>{check.title}</h4>
               <p>{check.detail}</p>
               {check.links?.length ? (
                 <div className="review-check-actions">
@@ -436,7 +437,7 @@ function PrepReviewChecks({ checks }: { checks: ReviewCheck[] }) {
                 </div>
               ) : null}
             </div>
-          </article>
+          </details>
         ))}
       </div>
     </section>

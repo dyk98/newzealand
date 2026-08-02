@@ -49,11 +49,11 @@
 | 7 | 09.30 | Wanaka -> Arrowtown -> Queenstown |
 | 8 | 10.01 | Queenstown Hydro Attack 鲨鱼艇 + Skyline 缆车 / Luge |
 | 9 | 10.02 | Queenstown -> Te Anau，Milford 前夜基地 |
-| 10 | 10.03 | Milford Sound Te Anau 出发大巴 + 游船一日团 |
+| 10 | 10.03 | RealNZ 普通大巴 + Milford Sound 游船一日团，Te Anau 出发 |
 | 11 | 10.04 | Te Anau -> Queenstown，峡湾后缓冲 |
-| 12 | 10.05 | Queenstown -> Cromwell / Omarama -> Tekapo，Twizel 仅作安全降级 |
+| 12 | 10.05 | Queenstown -> Cromwell / Omarama -> Tekapo，入住已订的 Tekapo 住宿 |
 | 13 | 10.06 | Tekapo 返回基督城，傍晚完成还车 |
-| 14 | 10.07 | 基督城飞悉尼，T1 过夜并按条件执行海港夜游 |
+| 14 | 10.07 | 基督城飞悉尼，入住 Mascot 的 Stamford Plaza，按条件执行海港夜游 |
 | 15 | 10.08 | 悉尼飞香港，乘预订跨境包车返回广州 |
 
 ## 核心功能
@@ -105,7 +105,7 @@
 
 入口：`/#todos`
 
-- 汇总最关键准备事项：澳签批准信归档、新西兰 NZeTA + IVL。
+- 汇总最关键准备事项：澳签批准信打印 / 离线保存、新西兰 NZeTA + IVL 与四人 NZTD。
 - 统计行前准备总进度。
 - 按类别组织 checklist：
   - 住宿预订

@@ -16,12 +16,37 @@ type AppState = {
   completedDayTodos: string[]
   likedDays: string[]
   selectedPlans: Record<string, string>
+  appliedMigrations: string[]
 }
+
+const todoCompletionMigrations = [
+  {
+    id: '2026-08-02-known-bookings-v1',
+    completedTodoIds: [
+      'book-chc-late',
+      'book-twizel',
+      'book-wanaka',
+      'book-queenstown',
+      'book-te-anau',
+      'book-queenstown-buffer',
+      'book-return-lakes',
+      'book-chc-return',
+      'book-sydney-t1',
+      'book-car',
+      'book-cardrona-ski',
+    ],
+  },
+  {
+    id: '2026-08-02-consolidated-stays-v2',
+    completedTodoIds: ['book-all-stays'],
+  },
+]
 
 const defaultState: AppState = {
   completedTodoIds: [],
   completedDayTodos: [],
   likedDays: [],
+  appliedMigrations: [],
   selectedPlans: Object.fromEntries(
     tripDays
       .filter((day) => day.weatherPlans?.length)
@@ -29,9 +54,23 @@ const defaultState: AppState = {
   ),
 }
 
+function loadAppState(): AppState {
+  const storedState = readStoredState(appStateKey, defaultState)
+
+  return todoCompletionMigrations.reduce<AppState>((state, migration) => {
+    if (state.appliedMigrations.includes(migration.id)) return state
+
+    return {
+      ...state,
+      completedTodoIds: Array.from(new Set([...state.completedTodoIds, ...migration.completedTodoIds])),
+      appliedMigrations: [...state.appliedMigrations, migration.id],
+    }
+  }, storedState)
+}
+
 function App() {
   const [hash, setHash] = useState(getCurrentHash)
-  const [state, setState] = useState<AppState>(() => readStoredState(appStateKey, defaultState))
+  const [state, setState] = useState<AppState>(loadAppState)
   const [selectedContextId, setSelectedContextId] = useState<string | null>(null)
   const [closingContextId, setClosingContextId] = useState<string | null>(null)
 
