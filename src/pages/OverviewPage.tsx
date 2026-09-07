@@ -1,5 +1,5 @@
 import { BaggageClaim, Map as MapIcon } from 'lucide-react'
-import { criticalPrepItems, prepBudgetCards, todoGroups } from '../data/tripData'
+import { criticalPrepItems, prepBudgetCards, todoGroups, tripParty } from '../data/tripData'
 import { openAppHash } from '../utils/storage'
 
 type OverviewPageProps = {
@@ -18,10 +18,10 @@ export function OverviewPage({ completedTodoIds }: OverviewPageProps) {
   const progress = Math.round((completedPrepItems / Math.max(1, allPrepItems.length)) * 100)
   const stayBudget = prepBudgetCards.find((card) => card.label === '住宿已订合计')?.value ?? '¥25,678.76'
   const stats = [
-    { label: '旅行天数', value: '15 天', note: '09.24-10.08' },
+    { label: '旅行天数', value: '15 天', note: `${tripParty.size} 人同行 / 09.24-10.08` },
     { label: '南岛自驾', value: '11 天', note: '09.26-10.06' },
     { label: '核心准备', value: `${progress}%`, note: `${completedPrepItems}/${allPrepItems.length} 项完成` },
-    { label: '住宿已订', value: stayBudget, note: '9 个时段 / 13 个酒店夜' },
+    { label: '住宿原订单', value: stayBudget, note: '原 4 人订单；第 5 人床位待落实' },
   ]
 
   return (
@@ -32,7 +32,7 @@ export function OverviewPage({ completedTodoIds }: OverviewPageProps) {
           <div className="overview-hero-content">
             <span>2026 国庆新西兰行</span>
             <h1>15 天 14 晚新西兰路书</h1>
-            <p>09.24 从广州出发，完成南岛自驾后经悉尼过夜，10.08 从香港乘跨境包车返回广州。</p>
+            <p>{tripParty.notice}</p>
           </div>
         </section>
 

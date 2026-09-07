@@ -18,7 +18,7 @@ import {
   Utensils,
   WalletCards,
 } from 'lucide-react'
-import { criticalPrepItems, prepBudgetCards, todoGroups } from '../data/tripData'
+import { criticalPrepItems, prepBudgetCards, todoGroups, tripParty } from '../data/tripData'
 import { openAppHash } from '../utils/storage'
 import type { TodoGroup, TodoItem } from '../types/trip'
 
@@ -36,8 +36,8 @@ const prepTodoIds = new Set([
   ...todoGroups.flatMap((group) => group.items.map((item) => item.id)),
 ])
 const itemTimingLabels: Record<string, string> = {
-  'critical-complete-nztd': '出发当天',
-  'car-luggage': '取车现场',
+  'critical-complete-nztd-five': '出发当天',
+  'car-luggage-five': '出发前确认 / 取车复核',
   'book-keydrop': '10.05 复核',
 }
 
@@ -72,7 +72,7 @@ export function PrepPage({ completedTodoIds, onToggleTodo }: PrepPageProps) {
           <div className="overview-hero-content">
             <span>Prep</span>
             <h1>行前准备</h1>
-            <p>先完成影响出行的核心事项，再处理打包、餐饮和路况检查。</p>
+            <p>{tripParty.notice}</p>
           </div>
         </header>
 

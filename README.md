@@ -45,8 +45,8 @@
 | 3 | 09.26 | 基督城取车采购，经 Tekapo 到 Twizel |
 | 4 | 09.27 | Twizel -> Mt Cook -> 回住 Twizel，Hooker Valley Track 天气决策日 |
 | 5 | 09.28 | Twizel -> Wanaka，把长开车从徒步日拆出 |
-| 6 | 09.29 | Wanaka 湖边恢复、洗衣、补给 |
-| 7 | 09.30 | Wanaka -> Arrowtown -> Queenstown |
+| 6 | 09.29 | Cardrona 滑雪：原 4 人雪票与装备已购，第 5 人参与、经验及补订待确认 |
+| 7 | 09.30 | Wanaka -> Real Guns 五人实弹射击（10:00 优先询订）-> Arrowtown 条件性短停 -> Queenstown |
 | 8 | 10.01 | Queenstown Hydro Attack 鲨鱼艇 + Skyline 缆车 / Luge |
 | 9 | 10.02 | Queenstown -> Te Anau，Milford 前夜基地 |
 | 10 | 10.03 | RealNZ 普通大巴 + Milford Sound 游船一日团，Te Anau 出发 |
@@ -105,7 +105,8 @@
 
 入口：`/#todos`
 
-- 汇总最关键准备事项：澳签批准信与 NZeTA 确认邮件打印 / 离线保存，以及四人 NZTD。
+- 当前按 5 人出行维护；原 4 人机票、住宿、签证和滑雪订单保留，第 5 人覆盖情况单独确认。
+- 汇总最关键准备事项：新增同伴机票 / 入境许可 / 床位、原 4 人材料归档，以及五人 NZTD。
 - 统计行前准备总进度。
 - 按类别组织 checklist：
   - 住宿预订
