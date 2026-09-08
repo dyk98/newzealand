@@ -42,17 +42,17 @@
 |---|---:|---|
 | 1 | 09.24 | 广州 -> 香港 -> 墨尔本，包车到 HKG，20:05 红眼飞 MEL |
 | 2 | 09.25 | 墨尔本入境取行李并寄存，CBD 轻量短游，18:40 飞基督城 |
-| 3 | 09.26 | 基督城取车采购，经 Tekapo 到 Twizel，入住 Birch Hill Escape（2 Birch Hill Drive） |
-| 4 | 09.27 | Twizel -> Mt Cook -> 回住 Birch Hill Escape，Hooker Valley Track 天气决策日 |
-| 5 | 09.28 | Twizel -> Wanaka，五人分住汉普郡假日公园和 Sundale，集合领取滑雪装备 |
-| 6 | 09.29 | Cardrona 滑雪：原 4 人雪票与装备已购，第 5 人参与、经验及补订待确认 |
-| 7 | 09.30 | Wanaka -> Real Guns 五人实弹射击（10:00 优先询订）-> Arrowtown 条件性短停 -> Queenstown |
-| 8 | 10.01 | Queenstown Hydro Attack 鲨鱼艇 + Skyline 缆车 / Luge |
-| 9 | 10.02 | Queenstown -> Te Anau，入住 The Distinction Luxmore Hotel（41 Town Centre），连住两晚 |
-| 10 | 10.03 | RealNZ 普通大巴 + Milford Sound 游船一日团，Te Anau 出发 |
-| 11 | 10.04 | Te Anau -> Queenstown，峡湾后缓冲 |
-| 12 | 10.05 | Queenstown -> Cromwell / Omarama -> Tekapo，入住已订的 Tekapo 住宿 |
-| 13 | 10.06 | Tekapo 返回基督城，傍晚完成还车 |
+| 3 | 09.26 | 基督城取车，经 Tekapo 到 Twizel，入住 Birch Hill Escape；Poppies 晚餐待订 |
+| 4 | 09.27 | Twizel -> Mt Cook 徒步 -> 回住 Birch Hill Escape；The Moraine 品鉴与接送待订 |
+| 5 | 09.28 | 前往 Wanaka，分住汉普郡与 Sundale、领取雪具；Kika 晚餐待订 |
+| 6 | 09.29 | Cardrona 滑雪：原 4 人已购，第 5 人补确认；还装备后 Muttonbird 晚餐待订 |
+| 7 | 09.30 | Real Guns（10:00 优先询订）-> 箭镇可选 -> Queenstown；Botswana 晚餐待订 |
+| 8 | 10.01 | Hydro Attack + Skyline / Luge；回 Rees 的 True South 品鉴晚餐待订 |
+| 9 | 10.02 | 前往 Te Anau，入住 Distinction Luxmore；The Redcliff 晚餐待订 |
+| 10 | 10.03 | RealNZ 普通大巴 + Milford 游船；返抵后 The Fat Duck 晚餐待订 |
+| 11 | 10.04 | 回 Queenstown 后休整；Amisfield 晚间品鉴及五人往返接送待订 |
+| 12 | 10.05 | Stoaker Room Cromwell 午餐 -> Omarama 短休 -> Tekapo 入住；Kohan 晚餐待订 |
+| 13 | 10.06 | 返回基督城，18:00 前还车并入住机场酒店；打车往返 INATI 晚餐待订 |
 | 14 | 10.07 | 基督城飞悉尼，入住 Mascot 的 Stamford Plaza，按条件执行海港夜游 |
 | 15 | 10.08 | 悉尼飞香港，乘预订跨境包车返回广州 |
 
@@ -106,6 +106,7 @@
 入口：`/#todos`
 
 - 当前按 5 人出行维护；住宿只展示当前房源、地址和各段总价，合计 ¥38,270.17 人民币。09.28–09.30 分住 Wanaka 汉普郡假日公园（¥1,177.62）和朋友的 Sundale Ata Studios & Sundale Mora Motels（¥2,824.00），两处两晚合计 ¥4,001.62 人民币。房型、人数和早餐按各自确认单核对。
+- 餐饮按五人、无忌口、预算不限规划；12 顿主线餐厅及五人订位、接送检查已加入，各餐仍为待订，不加入已付住宿合计。
 - 原 4 人机票、签证和滑雪订单保留，第 5 人覆盖情况单独确认。
 - 汇总最关键准备事项：新增同伴机票 / 入境许可 / 床位、原 4 人材料归档，以及五人 NZTD。
 - 统计行前准备总进度。
@@ -119,6 +120,16 @@
   - 签证 / 证件
   - 携带物品
 - 每个任务可附带截止日期、预算金额、关联 Day 和优先级。
+
+### 餐饮升级
+
+重点预订 The Moraine、Kika、Amisfield 与 INATI。餐厅名称、地址、菜单、地图入口、营业参考、询订时段与退改提醒集中维护在 `src/data/diningData.ts`，并用于每日详情、餐厅卡片和准备清单。所有新餐厅使用独立的待办 ID，不继承旧餐饮清单的完成状态。
+
+- 10.04 Amisfield 是晚间完整品鉴，不是午餐 Bistro；往返接送另订，饮酒者不驾车。
+- 10.05 午餐改为 Stoaker Room 的 Cromwell 店，Omarama 仅约 14:45–15:00 短休；Mt Difficulty 当前周一不营业。
+- 10.06 先在 18:00 前还车并搭接驳、入住机场酒店，再打车去 INATI；19:30 入座和完整菜单须餐厅确认，不能靠晚还车赶餐。
+- 墨尔本 Gimlet 和悉尼 Cafe Sydney 只作为条件性候选，不加入默认时间线；须核对中转余量及退改风险。
+- 公开菜单价格区分 NZD / AUD，均为样例或当前参考，不代表实际支付；菜单、营业日及席位以最终确认单为准。
 
 ## 技术栈
 
@@ -144,6 +155,7 @@
 | `src/components/ContextModal.tsx` | 地点、交通、航班、餐饮等上下文弹窗 |
 | `src/components/RouteMapCard.tsx` | 南岛自驾路线图 |
 | `src/data/tripData.ts` | 主要行程、上下文卡片、预算、行前任务数据 |
+| `src/data/diningData.ts` | 餐厅、菜单与地图入口、五人订位清单和营业限制 |
 | `src/types/trip.ts` | 路书数据结构类型 |
 | `src/content/itinerary.md` | 原始路书内容存档 |
 | `public/trip-media/` | 新西兰主题图片和路线图 |
@@ -164,6 +176,8 @@
 - `contextCards`：地点、航班、交通、餐饮、活动等弹窗资料。
 - `todoGroups`：行前准备分组和任务。
 - `prepBudgetCards` / `budgetCards`：预算摘要。
+
+餐饮资料另在 `src/data/diningData.ts` 的 `diningStops` 维护，统一生成餐厅详情卡、当地特色卡、复查项和订位待办；更改用餐日期或时段时，同步修改 `tripData.ts` 中对应的每日时间线与 `src/content/itinerary.md`，避免只更新卡片而遗漏接送与驾驶安排。
 
 类型定义在 `src/types/trip.ts`。新增字段前先确认页面是否消费该字段；不要只往数据里堆未使用内容。
 
