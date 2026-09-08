@@ -40,6 +40,14 @@ const todoCompletionMigrations = [
     id: '2026-08-02-consolidated-stays-v2',
     completedTodoIds: ['book-all-stays'],
   },
+  {
+    id: '2026-09-07-added-stay-bookings-v1',
+    completedTodoIds: ['book-chc-outbound-extra', 'book-pinewood-extra', 'book-chc-return-extra'],
+  },
+  {
+    id: '2026-09-08-wanaka-sundale-stay-v1',
+    completedTodoIds: ['book-wanaka-sundale'],
+  },
 ]
 
 const defaultState: AppState = {

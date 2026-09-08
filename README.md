@@ -42,13 +42,13 @@
 |---|---:|---|
 | 1 | 09.24 | 广州 -> 香港 -> 墨尔本，包车到 HKG，20:05 红眼飞 MEL |
 | 2 | 09.25 | 墨尔本入境取行李并寄存，CBD 轻量短游，18:40 飞基督城 |
-| 3 | 09.26 | 基督城取车采购，经 Tekapo 到 Twizel |
-| 4 | 09.27 | Twizel -> Mt Cook -> 回住 Twizel，Hooker Valley Track 天气决策日 |
-| 5 | 09.28 | Twizel -> Wanaka，把长开车从徒步日拆出 |
+| 3 | 09.26 | 基督城取车采购，经 Tekapo 到 Twizel，入住 Birch Hill Escape（2 Birch Hill Drive） |
+| 4 | 09.27 | Twizel -> Mt Cook -> 回住 Birch Hill Escape，Hooker Valley Track 天气决策日 |
+| 5 | 09.28 | Twizel -> Wanaka，五人分住汉普郡假日公园和 Sundale，集合领取滑雪装备 |
 | 6 | 09.29 | Cardrona 滑雪：原 4 人雪票与装备已购，第 5 人参与、经验及补订待确认 |
 | 7 | 09.30 | Wanaka -> Real Guns 五人实弹射击（10:00 优先询订）-> Arrowtown 条件性短停 -> Queenstown |
 | 8 | 10.01 | Queenstown Hydro Attack 鲨鱼艇 + Skyline 缆车 / Luge |
-| 9 | 10.02 | Queenstown -> Te Anau，Milford 前夜基地 |
+| 9 | 10.02 | Queenstown -> Te Anau，入住 The Distinction Luxmore Hotel（41 Town Centre），连住两晚 |
 | 10 | 10.03 | RealNZ 普通大巴 + Milford Sound 游船一日团，Te Anau 出发 |
 | 11 | 10.04 | Te Anau -> Queenstown，峡湾后缓冲 |
 | 12 | 10.05 | Queenstown -> Cromwell / Omarama -> Tekapo，入住已订的 Tekapo 住宿 |
@@ -105,7 +105,8 @@
 
 入口：`/#todos`
 
-- 当前按 5 人出行维护；原 4 人机票、住宿、签证和滑雪订单保留，第 5 人覆盖情况单独确认。
+- 当前按 5 人出行维护；住宿只展示当前房源、地址和各段总价，合计 ¥37,998.63 人民币。09.28–09.30 分住 Wanaka 汉普郡假日公园（¥1,177.62）和朋友的 Sundale Ata Studios & Sundale Mora Motels（¥2,552.46），两处两晚合计 ¥3,730.08 人民币。房型、人数和早餐按各自确认单核对。
+- 原 4 人机票、签证和滑雪订单保留，第 5 人覆盖情况单独确认。
 - 汇总最关键准备事项：新增同伴机票 / 入境许可 / 床位、原 4 人材料归档，以及五人 NZTD。
 - 统计行前准备总进度。
 - 按类别组织 checklist：
