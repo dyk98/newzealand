@@ -16,7 +16,7 @@ export function OverviewPage({ completedTodoIds }: OverviewPageProps) {
   const prepItemIds = new Set(allPrepItems.map((item) => item.id))
   const completedPrepItems = completedTodoIds.filter((todoId) => prepItemIds.has(todoId)).length
   const progress = Math.round((completedPrepItems / Math.max(1, allPrepItems.length)) * 100)
-  const stayBudget = prepBudgetCards.find((card) => card.label === '住宿当前合计')?.value ?? '¥37,998.63'
+  const stayBudget = prepBudgetCards.find((card) => card.label === '住宿当前合计')?.value ?? '¥38,270.17'
   const stats = [
     { label: '旅行天数', value: '15 天', note: `${tripParty.size} 人同行 / 09.24-10.08` },
     { label: '南岛自驾', value: '11 天', note: '09.26-10.06' },

@@ -19,14 +19,14 @@
 以下金额均为人民币，按当前住宿时段汇总；五人房型、早餐和入住方式按确认单核对。
 09.25–09.26 基督城机场 Sudima Christchurch Airport 1 晚，合计 ¥2,469.38 人民币。按确认单核对五人房型和早餐，并备注 09.26 凌晨到店。
 09.26 入住、09.28 退房 Twizel 2 晚：Birch Hill Escape；地址：2 Birch Hill Drive, Twizel, Canterbury 7901；两晚合计 ¥5,037.33 人民币。保存五人住宿确认和自助入住说明。房源：https://www.airbnb.com/rooms/1008884615708039036。
-09.28 入住、09.30 退房 Wanaka 2 晚：五人分住两处，两处两晚合计 ¥3,730.08 人民币。保留汉普郡假日公园 - 瓦娜卡湖（Hampshire Holiday Parks – Wanaka），两晚 ¥1,177.62，地址：212 Brownston Street, Wanaka, Otago 9305, New Zealand；朋友住 Sundale Ata Studios & Sundale Mora Motels，两晚 ¥2,552.46，园区地址：217 Wanaka Mount Aspiring Road, Wanaka, Otago 9305, New Zealand，具体房区、房号和入住时段以确认单为准。两处均在 Wanaka，分别核对入住人数、床位和早餐，并约定滑雪日及退房日的集合接送。园区位置参考：https://book.isite.nz/sundale-holiday-park。
+09.28 入住、09.30 退房 Wanaka 2 晚：五人分住两处，两处两晚合计 ¥4,001.62 人民币。保留汉普郡假日公园 - 瓦娜卡湖（Hampshire Holiday Parks – Wanaka），两晚 ¥1,177.62，地址：212 Brownston Street, Wanaka, Otago 9305, New Zealand；朋友住 Sundale Ata Studios & Sundale Mora Motels，两晚 ¥2,824.00，园区地址：217 Wanaka Mount Aspiring Road, Wanaka, Otago 9305, New Zealand，具体房区、房号和入住时段以确认单为准。两处均在 Wanaka，分别核对入住人数、床位和早餐，并约定滑雪日及退房日的集合接送。园区位置参考：https://book.isite.nz/sundale-holiday-park。
 09.30 入住、10.02 退房 Queenstown 2 晚：里斯酒店&豪华公寓（The Rees Hotel, Luxury Apartments & Lakeside Residences），两晚总价 ¥13,694.06 人民币；五人房型、床位和早餐按确认单核对。
 10.02 入住、10.04 退房 Te Anau 2 晚：The Distinction Luxmore Hotel，地址：41 Town Centre, Te Anau, New Zealand（蒂阿瑙，新西兰）；两晚总价 ¥4,517.62 人民币。房间数、床型和早餐按确认单核对。官方普通入住时间为 14:00 起、退房时间为 10:00；电话：+64 3 249 7526。官方信息：https://www.distinctionhotels.co.nz/x,1009,2858/terms-conditions.html。
 10.04 入住、10.05 退房 Queenstown 1 晚：Pinewood Queenstown，合计 ¥1,794.43 人民币。五人房型、早餐及入住要求按确认单核对；地址：48 Hamilton Road, Queenstown, Otago, 9300, New Zealand；电话：0064-3-4428272。
 10.05 入住、10.06 退房 Tekapo 1 晚：Stay In Tekapo Backpackers，总价 ¥1,267 人民币；地址：14 Rapuwai Lane, Lake Tekapo, 7999, New Zealand。五人房型和床位按确认单核对。
 10.06 入住、10.07 退房基督城机场 1 晚：Sudima Hotel Christchurch Airport，合计 ¥3,181.35 人民币。五人房型和早餐按确认单核对；地址：550 Memorial Avenue, Christchurch Airport, Christchurch, Canterbury, 8005, New Zealand。
 10.07 入住、10.08 退房悉尼机场 1 晚：斯坦福德广场悉尼机场酒店及会议中心（Stamford Plaza Sydney Airport Hotel & Conference Centre），合计 ¥2,307.38 人民币；地址：241 O'Riordan St, Mascot, New South Wales, 2020, Australia；电话：0061-2-93172200。五人房型、床位和早餐按确认单核对。
-住宿合计：¥37,998.63 人民币，共 9 个住宿时段、13 晚；09.28–09.30 分住两处的费用均已计入，住宿日期不增加。
+住宿合计：¥38,270.17 人民币，共 9 个住宿时段、13 晚；09.28–09.30 分住两处的费用均已计入，住宿日期不增加。
 
 ### 汽车 / 租车
 南岛租车已订，总消费 ¥8,296
@@ -245,12 +245,12 @@ To-do：
 17:30-18:15 领装备后默认在 Après Bar & Restaurant 就地早吃，排队明显就改外带，不挤占补给和早睡时间。
 18:20-19:00 到 New World Wānaka 或等价超市补给，买好第二天早餐、水、能量食品和简餐，并按参加者需要补齐保暖底层、手套和防晒用品。
 19:00-21:30 分别回汉普郡和 Sundale 洗衣、烘干、整理滑雪装备和日用包。按人分好雪服、手套、雪镜、头盔、袜子、防晒和订单二维码；今晚约定车辆过夜地点、两处接人顺序和集合点，目标次日 07:05 前完成集合装车、07:10 出发，接人时间按导航另外预留。次日 06:30 复查 Snow Report，21:30 前休息。
-住宿：五人分住汉普郡假日公园 - 瓦娜卡湖（两晚 ¥1,177.62）和朋友的 Sundale Ata Studios & Sundale Mora Motels（两晚 ¥2,552.46），两处两晚合计 ¥3,730.08 人民币。
+住宿：五人分住汉普郡假日公园 - 瓦娜卡湖（两晚 ¥1,177.62）和朋友的 Sundale Ata Studios & Sundale Mora Motels（两晚 ¥2,824.00），两处两晚合计 ¥4,001.62 人民币。
 当天节奏：中途拆路 + 稳入住 + 集中完成滑雪准备
 备注：09.28 是 South Canterbury Anniversary Day，且处于学校假期，出发前复核 Twizel 早餐、加油和超市的节假日营业安排。如果抵达 Wanaka 明显延误，在 19:00 前直接联系 Cardrona 门店，不自行假定第二天一定能无缝改为山上领取。
 To-do：
 离线保存汉普郡假日公园 - 瓦娜卡湖订单：09.28 入住、09.30 退房，总价 ¥1,177.62，电话 0064-34437883。
-离线保存朋友 Sundale Ata Studios & Sundale Mora Motels 订单：09.28 入住、09.30 退房，两晚 ¥2,552.46 人民币；保存具体房区、入住和停车说明。两处合计住五人，按各自确认单核对人数、床位和早餐，不把五人都登记到一家。
+离线保存朋友 Sundale Ata Studios & Sundale Mora Motels 订单：09.28 入住、09.30 退房，两晚 ¥2,824.00 人民币；保存具体房区、入住和停车说明。两处合计住五人，按各自确认单核对人数、床位和早餐，不把五人都登记到一家。
 约定两处住宿的车辆过夜地点、接人顺序及次日 07:05 前集合装车，接人时间单独预留。
 离线保存 Cardrona 五人雪票、租赁订单和预订二维码；五人提前填好身高、体重、鞋码和站姿。
 出发前查 NZTA Journey Planner，确认 Twizel -> Omarama -> Lindis Pass -> Wanaka 没有封路或天气影响。
@@ -270,7 +270,7 @@ To-do：
 15:35-16:15 在基地上厕所、穿回普通鞋、五人点齐装备，默认排 16:00 下山接驳；16:15 只作当日官方时刻仍确认运行时的最后余量。接驳时刻可因天气、道路或运力变更，当早再确认。
 17:15-18:00 从 The Pines 自驾回 Après / 50 Cardrona Valley Road，在 19:00 营业结束前归还五人装备。租赁装备原则上必须归还到领取地点，除非事先另有安排；现场五人交接完再离开。
 18:15-19:15 用 Big Fig、外带或超市简餐快速吃到热食和碳水，再分别回汉普郡和 Sundale 洗澡、恢复。不订必须准时赶到的正式餐，晚上补水、拉伸、检查磕碰，整理行李并约定次日两处退房后的接人顺序，09:10 前集合出发。
-住宿：五人继续分住汉普郡假日公园 - 瓦娜卡湖与 Sundale Ata Studios & Sundale Mora Motels，连住第二晚；两处两晚合计 ¥3,730.08 人民币，不重复计费。
+住宿：五人继续分住汉普郡假日公园 - 瓦娜卡湖与 Sundale Ata Studios & Sundale Mora Motels，连住第二晚；两处两晚合计 ¥4,001.62 人民币，不重复计费。
 当天节奏：高强度：早起 + 全日单板，晚上只恢复
 备注：Cardrona 2026 季末暂定至 10.11，09.29 实际开放缆车和雪道以当日 Snow Report 为准。雪场正常开放但雪质不理想时，不默认可退；部分开放时先评估中高级开放面，有疑问在出发前联系 Guest Services。
 To-do：

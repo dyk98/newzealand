@@ -1432,9 +1432,9 @@ export const contextCards: ContextCard[] = [
     actionLabel: '两处住宿',
     name: 'Hampshire Wanaka + Sundale',
     cn: '五人分住两处 / 均在 Wanaka',
-    body: '09.28 入住、09.30 退房，连住两晚。保留汉普郡假日公园 - 瓦娜卡湖，朋友住 Sundale Ata Studios & Sundale Mora Motels；两处两晚合计 ¥3,730.08 人民币。',
+    body: '09.28 入住、09.30 退房，连住两晚。保留汉普郡假日公园 - 瓦娜卡湖，朋友住 Sundale Ata Studios & Sundale Mora Motels；两处两晚合计 ¥4,001.62 人民币。',
     tags: ['五人同行', '两处住宿', '两晚', '人民币'],
-    quickFacts: ['汉普郡 ¥1,177.62 / 两晚', '朋友 Sundale ¥2,552.46 / 两晚', '两处合计 ¥3,730.08 人民币'],
+    quickFacts: ['汉普郡 ¥1,177.62 / 两晚', '朋友 Sundale ¥2,824.00 / 两晚', '两处合计 ¥4,001.62 人民币'],
     links: [reviewLinks.sundaleStay],
     sections: [
       {
@@ -1443,7 +1443,7 @@ export const contextCards: ContextCard[] = [
       },
       {
         title: '朋友住宿：Sundale Ata Studios & Sundale Mora Motels',
-        body: '两晚总价 ¥2,552.46 人民币。园区地址为 217 Wanaka Mount Aspiring Road, Wanaka, Otago 9305, New Zealand；具体房区、房号和入住时段以确认单为准。',
+        body: '两晚总价 ¥2,824.00 人民币。园区地址为 217 Wanaka Mount Aspiring Road, Wanaka, Otago 9305, New Zealand；具体房区、房号和入住时段以确认单为准。',
       },
       {
         title: '入住与集合',
@@ -3336,7 +3336,7 @@ export const tripDays: TripDay[] = [
         time: '15:15–16:00',
         title: '抵达 Wanaka，分别办理两处住宿入住',
         meta: '汉普郡：212 Brownston Street / Sundale 园区：217 Wanaka Mount Aspiring Road',
-        detail: '09.28 入住、09.30 退房，五人分住两处：汉普郡假日公园两晚 ¥1,177.62，朋友的 Sundale Ata Studios & Sundale Mora Motels 两晚 ¥2,552.46，合计 ¥3,730.08 人民币。分别按确认单办理入住和停车，Sundale 的具体房区及入住时段以订单为准；目标 16:00 集合领装备，办理延误就压缩晚餐和可选停留，不挤掉配装时间。',
+        detail: '09.28 入住、09.30 退房，五人分住两处：汉普郡假日公园两晚 ¥1,177.62，朋友的 Sundale Ata Studios & Sundale Mora Motels 两晚 ¥2,824.00，合计 ¥4,001.62 人民币。分别按确认单办理入住和停车，Sundale 的具体房区及入住时段以订单为准；目标 16:00 集合领装备，办理延误就压缩晚餐和可选停留，不挤掉配装时间。',
         tone: 'rest',
         icon: BedDouble,
         contextIds: ['wanaka-split-stays', 'wanaka'],
@@ -3379,12 +3379,12 @@ export const tripDays: TripDay[] = [
         contextIds: ['wanaka-split-stays', 'cardrona', 'day-6-ski-plan'],
       },
     ],
-    accommodation: '五人分住：汉普郡假日公园 - 瓦娜卡湖（212 Brownston Street）＋Sundale Ata Studios & Sundale Mora Motels（217 Wanaka Mount Aspiring Road 园区）｜均在 Wanaka｜两处两晚合计 ¥3,730.08 人民币',
+    accommodation: '五人分住：汉普郡假日公园 - 瓦娜卡湖（212 Brownston Street）＋Sundale Ata Studios & Sundale Mora Motels（217 Wanaka Mount Aspiring Road 园区）｜均在 Wanaka｜两处两晚合计 ¥4,001.62 人民币',
     intensity: '节奏适中：中途拆路 + 稳入住',
     note: '这一天后半段已转为滑雪准备：领装备、补给、洗衣和早睡的优先级高于湖边打卡。',
     todos: [
       '离线保存汉普郡假日公园 - 瓦娜卡湖订单：09.28 入住｜09.30 退房｜¥1,177.62',
-      '离线保存朋友 Sundale Ata Studios & Sundale Mora Motels 订单：09.28 入住｜09.30 退房｜两晚 ¥2,552.46 人民币',
+      '离线保存朋友 Sundale Ata Studios & Sundale Mora Motels 订单：09.28 入住｜09.30 退房｜两晚 ¥2,824.00 人民币',
       '两处分别核对入住人数、床位与早餐；保存 Sundale 房区和停车说明，约定车辆过夜地点、接人顺序及次日 07:05 前集合',
       '出发前查 NZTA Journey Planner，确认 Twizel -> Omarama -> Lindis Pass -> Wanaka 路况',
       '09.28 是 South Canterbury Anniversary Day；前一天确认 Twizel 早餐、加油和超市是否营业及是否收节假日附加费',
@@ -3679,7 +3679,7 @@ export const tripDays: TripDay[] = [
         contextIds: ['wanaka', 'day-6-food-plan'],
       },
     ],
-    accommodation: '五人继续分住汉普郡假日公园 - 瓦娜卡湖（212 Brownston Street）＋Sundale Ata Studios & Sundale Mora Motels（217 Wanaka Mount Aspiring Road 园区）｜Wanaka 连住第二晚｜两处两晚合计 ¥3,730.08 人民币，不重复计费',
+    accommodation: '五人继续分住汉普郡假日公园 - 瓦娜卡湖（212 Brownston Street）＋Sundale Ata Studios & Sundale Mora Motels（217 Wanaka Mount Aspiring Road 园区）｜Wanaka 连住第二晚｜两处两晚合计 ¥4,001.62 人民币，不重复计费',
     intensity: '高强度：早起 + 全日单板，晚上只恢复',
     note: '五人分住汉普郡和 Sundale，接人装车时间另留。原 4 人不上初学课；第 5 人的经验、课程或不滑雪时的独立安排需提前确认。09.29 实际开放缆车和雪道以当日 Snow Report 为准。',
     todos: [
@@ -6049,7 +6049,7 @@ export const tripDays: TripDay[] = [
 ]
 
 export const prepBudgetCards = [
-  { label: '住宿当前合计', value: '¥37,998.63', note: '人民币；9 个住宿时段 / 13 晚，09.28–09.30 分住两处，均已计入' },
+  { label: '住宿当前合计', value: '¥38,270.17', note: '人民币；9 个住宿时段 / 13 晚，09.28–09.30 分住两处，均已计入' },
   { label: '租车已订', value: '¥8,296', note: '原订单金额；5 人乘坐、行李和雪具容量需提前确认，换车增量未计' },
   { label: 'Cardrona 滑雪日', value: '原 4 人已购', note: '09.29 原 4 人雪票 + 租赁；第 5 人参与、经验、票种与补订待确认，实付待回填' },
   { label: 'Real Guns 待订', value: 'NZ$845 基础参考 / 5 人', note: '09.30 优先询订 10:00；巴雷特另付费、手枪待确认，最终按报价' },
@@ -6092,7 +6092,7 @@ export const todoGroups: TodoGroup[] = [
     eyebrow: 'Stay',
     title: '住宿预订',
     subtitle: '按当前住宿核对入住信息',
-    summary: '9 个住宿时段、13 晚，合计 ¥37,998.63 人民币。09.28–09.30 五人分住 Wanaka 汉普郡假日公园和 Sundale，两处费用均已计入；各段只记录当前住宿、地址和总价。',
+    summary: '9 个住宿时段、13 晚，合计 ¥38,270.17 人民币。09.28–09.30 五人分住 Wanaka 汉普郡假日公园和 Sundale，两处费用均已计入；各段只记录当前住宿、地址和总价。',
     items: [
       {
         id: 'book-chc-outbound-extra',
@@ -6121,8 +6121,8 @@ export const todoGroups: TodoGroup[] = [
       {
         id: 'book-wanaka-sundale',
         text: '09.28–09.30 朋友 Sundale 住宿已确认',
-        amount: '两晚总价 ¥2,552.46 人民币',
-        note: 'Sundale Ata Studios & Sundale Mora Motels；园区地址：217 Wanaka Mount Aspiring Road, Wanaka。保留汉普郡假日公园两晚 ¥1,177.62，两处合计 ¥3,730.08 人民币。',
+        amount: '两晚总价 ¥2,824.00 人民币',
+        note: 'Sundale Ata Studios & Sundale Mora Motels；园区地址：217 Wanaka Mount Aspiring Road, Wanaka。保留汉普郡假日公园两晚 ¥1,177.62，两处合计 ¥4,001.62 人民币。',
         priority: 'medium',
         dayId: 'day-5',
       },
@@ -6594,7 +6594,7 @@ export const overviewStats = [
 
 export const budgetCards = [
   { label: '往返机票原订单', value: '¥51,467 / 原 4 人', note: '原单价 ¥12,866.75 / 人；第 5 人航班与实付待确认，不沿用旧票价作为新报价' },
-  { label: '住宿当前合计', value: '¥37,998.63', note: '人民币；9 个住宿时段 / 13 晚，含 Wanaka 两处住宿' },
+  { label: '住宿当前合计', value: '¥38,270.17', note: '人民币；9 个住宿时段 / 13 晚，含 Wanaka 两处住宿' },
   { label: '租车已订', value: '¥8,296', note: '不再重复计入历史租车预算' },
   { label: '澳洲签证原记录', value: 'AUD 1,000 / 原 4 人', note: '原 4 人已获批；第 5 人材料和费用待确认' },
   { label: 'NZeTA + IVL 原记录', value: 'NZ$468 / 原 4 人', note: '原 4 人已获批；第 5 人入境许可与费用待确认，NZTD 免费' },
