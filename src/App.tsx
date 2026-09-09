@@ -33,7 +33,6 @@ const todoCompletionMigrations = [
       'book-chc-return',
       'book-sydney-t1',
       'book-car',
-      'book-cardrona-ski',
     ],
   },
   {
@@ -45,8 +44,20 @@ const todoCompletionMigrations = [
     completedTodoIds: ['book-chc-outbound-extra', 'book-pinewood-extra', 'book-chc-return-extra'],
   },
   {
-    id: '2026-09-08-wanaka-sundale-stay-v1',
-    completedTodoIds: ['book-wanaka-sundale'],
+    id: '2026-09-08-wanaka-doug-ledgerwood-stay-v1',
+    completedTodoIds: ['book-wanaka-doug-ledgerwood'],
+  },
+  {
+    id: '2026-09-08-milford-haven-cruise-booked-v1',
+    completedTodoIds: ['book-milford-haven-five'],
+  },
+  {
+    id: '2026-09-09-skyline-gondola-luge-booked-v1',
+    completedTodoIds: ['book-skyline-gondola-luge-five'],
+  },
+  {
+    id: '2026-09-09-latest-tekapo-and-pinewood-stays-v1',
+    completedTodoIds: ['book-pinewood-original', 'book-tekapo-coulson-lane'],
   },
 ]
 

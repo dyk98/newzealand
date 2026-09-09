@@ -17,7 +17,7 @@ type DiningStop = {
   optional?: boolean
 }
 
-export const diningNotice = '5 人同行，无忌口，餐饮预算不设上限。以下均为待订计划，营业时间及样例菜单于 2026.09.08 核对，实际桌位、菜单、价格和退改条款以餐厅确认单为准。'
+export const diningNotice = '5 人同行，无忌口，餐饮预算不设上限。餐厅均未预订，正式下单前一起 review 五人桌位、菜单、总价、退改及与活动的衔接。营业时间及样例菜单于 2026.09.08 核对，以最终确认单为准。'
 
 export const diningStops: DiningStop[] = [
   {
@@ -34,7 +34,7 @@ export const diningStops: DiningStop[] = [
     id: 'moraine', dayId: 'day-4', date: '09.27', meal: '重点晚餐', name: 'The Moraine',
     address: 'Mt Cook Lakeside Retreat, 86 Mount Cook Road (SH80), Lake Pukaki, New Zealand',
     experience: '主厨多道品鉴菜单与 Ben Ohau 山景庄园环境；不住度假村也可以预约用餐。',
-    plan: '目标 18:30 入座，实际时段由餐厅确认。徒步后回 Twizel 洗漱，再按预约乘车往返餐厅；为晚餐留时间，下午可选短线不全部叠加。餐后回 Birch Hill Escape，不更换住宿。',
+    plan: '目标 18:30 入座，实际时段由餐厅确认。Mt Cook 徒步后优先回 Twizel 洗漱休整；下午短线只在天气、体力和时间都合适时选一条，不全部叠加。目标 17:00 前回住宿，下单前 review 晚餐与接送时间，餐后仍回 Birch Hill Escape。',
     hours: '官网欢迎非住客预约主厨品鉴；09.27 的开餐、结束时间及五人同桌需要单独确认。',
     booking: '优先询订五人主厨品鉴，确认用餐时长、同桌安排、总价与退改条款。需要饮酒则预订五人往返接送；默认只订晚餐，不自动加餐后观星。',
     links: [
@@ -96,9 +96,9 @@ export const diningStops: DiningStop[] = [
     id: 'redcliff', dayId: 'day-9', date: '10.02', meal: '峡湾前夜晚餐', name: 'The Redcliff',
     address: '12 Mokonui Street, Te Anau 9600, New Zealand',
     experience: '古朴环境里的现代料理，作为 Te Anau 的第一顿正式晚餐。',
-    plan: '目标 18:00–18:30 五人入座。下午先入住 Luxmore，买好 Milford 次日早餐和随身补给；晚餐后回酒店整理和休息。',
+    plan: '目标 18:30 五人入座。Queenstown 提前至 10:00 出发，午餐后采购并在 14:00 起入住 Luxmore，下午新增萤火虫洞待订；下单前一起 review 实际返抵与晚餐时间，不能默认为 17:30 一定回到镇上。晚餐后准备 Milford 并休息。',
     hours: '10.02 周五的营业、菜单和末轮入座需向店家确认，不按未核实的固定营业时间执行。',
-    booking: '提前询订五人早晚餐；未订成时可用 The Fat Duck 或 The Ranch，不增加夜间远途活动。',
+    booking: '提前询订五人 18:30 晚餐，并与萤火虫洞下午团一并 review；返抵时间无法衔接时先调整其中一项。未订成时可用 The Fat Duck 或 The Ranch，不增加夜间远途活动。',
     links: [{ label: 'The Redcliff 菜单 / 订位', url: 'https://theredcliff.co.nz/' }],
     priority: 'medium',
   },
@@ -106,9 +106,9 @@ export const diningStops: DiningStop[] = [
     id: 'fat-duck', dayId: 'day-10', date: '10.03', meal: '峡湾返程晚餐', name: 'The Fat Duck Te Anau',
     address: '124 Town Centre, Te Anau, New Zealand',
     experience: 'Te Anau 本地 gastropub 的季节料理与南方食材，峡湾一日团后留一顿舒适晚餐。',
-    plan: '目标 19:00 五人晚餐，以 RealNZ 最终返程安排为前提。预计返抵约 16:50 不是保证；明确延误时提前联系餐厅，必要时改用 The Ranch 或外带。',
+    plan: '目标调整为 19:30 五人晚餐，以 Milford 自驾返程为前提。游船结束后还要步行取车并驾驶约 2 小时以上，预计 17:45–18:30 回到 Te Anau 仅为规划区间；下单前确认迟到和改时条款，路况延误时先联系餐厅，不为赶订位压缩休息或超速。',
     hours: '当前官网列晚间 16:30 起营业，10.03 为周六；晚餐网上订位有当日截止时间，建议提前完成。',
-    booking: '询订时说明参加 Milford 一日团，问清迟到、改时和取消条款，不把临时改餐视为免费取消原订位。',
+    booking: '询订时说明当天从 Milford 自驾返回，优先询订 19:30，问清迟到、改时和取消条款；不把临时改餐视为免费取消原订位。',
     links: [{ label: 'The Fat Duck Te Anau / 菜单 / 订位', url: 'https://www.thefatduck.co.nz/' }],
     priority: 'medium',
   },
@@ -144,7 +144,7 @@ export const diningStops: DiningStop[] = [
     id: 'kohan', dayId: 'day-12', date: '10.05', meal: '湖区晚餐', name: 'Kohan Japanese Restaurant',
     address: '6 Rapuwai Lane, Lake Tekapo, New Zealand',
     experience: '三文鱼、寿司与日式料理，在连续西餐之间换一种口味。',
-    plan: '目标 18:30 五人晚餐。先完成 Tekapo 入住，再按时间短走湖边；行车延误时先联系住宿和餐厅，不跳过入住去赶吃饭。',
+    plan: '目标 18:30 五人晚餐。先完成 Tekapo 入住，再按时间短走湖边；餐后不订付费观星团，天空晴朗且五个人不累时在住宿附近安全开放区域自由观星，随时可以结束休息。行车延误时先联系住宿和餐厅，不跳过入住去赶晚餐。',
     hours: '官网当前晚餐列 17:30–20:00，个别日期会休息；10.05 为周一，具体营业和末轮入座仍需确认。',
     booking: '提前确认五人桌，可电话 +64 3 680 6688。未订成时保留 Dark Sky Diner 或附近简餐；Dark Sky Diner 仅 walk-in。',
     links: [{ label: 'Kohan 晚餐菜单 / 联系', url: 'https://kohannz.com/?page_id=14' }],
@@ -233,10 +233,10 @@ export const diningReviewChecks: Record<string, ReviewCheck> = Object.fromEntrie
 }]))
 
 export const diningBookingTodos: TodoItem[] = diningStops.map((stop) => ({
-  id: `book-dining-${stop.id}-five`,
+  id: `book-dining-${stop.id}-five-review`,
   dayId: stop.dayId,
   text: `${stop.date} ${stop.optional ? '评估' : '预订'} ${stop.name} ${stop.meal}`,
-  due: stop.priority === 'high' ? '优先询订 / 出发前' : '出发前确认',
+  due: stop.optional ? '决定是否执行前 review' : '正式下单前一起 review',
   priority: stop.priority,
   ...(stop.price ? { amount: stop.price } : {}),
   note: `${stop.optional ? '仅为候选，不自动订位。' : '五人待订，无忌口。'} ${stop.booking}`,

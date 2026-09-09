@@ -7,7 +7,7 @@ type RouteMapCardProps = {
 
 const routeMapImage = '/trip-media/south-island-route-map-watercolor.png'
 const routeSummary =
-  'Christchurch → Tekapo → Twizel ⇄ Mt Cook → Wanaka ⇄ Cardrona 滑雪 → Real Guns 射击 →（Arrowtown 条件性短停）→ Queenstown → Te Anau ⇄ Milford Sound（RealNZ 大巴 + 游船）→ Queenstown → Cromwell → Omarama →（Pukaki 条件性短停）→ Tekapo → Christchurch'
+  'Christchurch → Tekapo → Twizel ⇄ Mt Cook → Wanaka ⇄ Cardrona 滑雪 → Real Guns 射击 →（Arrowtown 条件性短停）→ Queenstown → Te Anau ⇄ Milford Sound（SH94 自驾 + 已购 RealNZ 避风港号游船）→ Queenstown → Cromwell → Omarama →（Pukaki 条件性短停）→ Tekapo → Christchurch'
 
 export function RouteMapCard({ compact = false }: RouteMapCardProps) {
   const [isOpen, setIsOpen] = useState(false)

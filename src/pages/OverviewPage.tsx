@@ -16,12 +16,12 @@ export function OverviewPage({ completedTodoIds }: OverviewPageProps) {
   const prepItemIds = new Set(allPrepItems.map((item) => item.id))
   const completedPrepItems = completedTodoIds.filter((todoId) => prepItemIds.has(todoId)).length
   const progress = Math.round((completedPrepItems / Math.max(1, allPrepItems.length)) * 100)
-  const stayBudget = prepBudgetCards.find((card) => card.label === '住宿当前合计')?.value ?? '¥38,270.17'
+  const stayBudget = prepBudgetCards.find((card) => card.label === '住宿当前合计')?.value ?? '¥44,210.65'
   const stats = [
     { label: '旅行天数', value: '15 天', note: `${tripParty.size} 人同行 / 09.24-10.08` },
     { label: '南岛自驾', value: '11 天', note: '09.26-10.06' },
     { label: '核心准备', value: `${progress}%`, note: `${completedPrepItems}/${allPrepItems.length} 项完成` },
-    { label: '住宿当前合计', value: stayBudget, note: '人民币 / 13 晚 / 含 Wanaka 两处住宿' },
+    { label: '住宿当前合计', value: stayBudget, note: '人民币 / 仅含原汉普郡待退订费用 ¥1,177.62' },
   ]
 
   return (

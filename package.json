@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "verify:activities": "node scripts/verify-activities.mjs",
     "preview": "vite preview",
     "deploy:cloudflare": "bash scripts/deploy-cloudflare.sh",
     "android:sync": "npm run build && cap sync android",
