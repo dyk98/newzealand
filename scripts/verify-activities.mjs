@@ -90,7 +90,9 @@ try {
   const milfordBooking = activityTodos.find(todo => todo.id === 'book-milford-haven-five')
   const skylineBooking = activityTodos.find(todo => todo.id === 'book-skyline-gondola-luge-five')
   const glowwormBooking = activityTodos.find(todo => todo.id === 'book-te-anau-glowworm-caves-five')
-  const bookedIds = new Set(['book-milford-haven-five', 'book-skyline-gondola-luge-five', 'book-te-anau-glowworm-caves-five'])
+  const cardronaPass = activityTodos.find(todo => todo.id === 'book-cardrona-lift-pass-three')
+  const racersEdgeRental = activityTodos.find(todo => todo.id === 'book-racers-edge-rental-three')
+  const bookedIds = new Set(['book-milford-haven-five', 'book-skyline-gondola-luge-five', 'book-te-anau-glowworm-caves-five', 'book-cardrona-lift-pass-three', 'book-racers-edge-rental-three'])
   const pendingReservationTodos = [...activityTodos.filter(todo => !bookedIds.has(todo.id)), ...dining.diningBookingTodos]
   assert.ok(milfordBooking)
   assert.match(milfordBooking.text, /已购买/)
@@ -106,6 +108,15 @@ try {
   assert.match(glowwormBooking.amount, /2,979\.37/)
   assert.match(glowwormBooking.note, /15:15/)
   assert.match(glowwormBooking.note, /14:45/)
+  assert.ok(cardronaPass)
+  assert.match(cardronaPass.text, /已购/)
+  assert.match(cardronaPass.amount, /552/)
+  assert.match(cardronaPass.note, /CT291054/)
+  assert.ok(racersEdgeRental)
+  assert.match(racersEdgeRental.text, /已购/)
+  assert.match(racersEdgeRental.amount, /255/)
+  assert.match(racersEdgeRental.note, /251514190424594/)
+  assert.match(racersEdgeRental.note, /22 Ardmore/)
   for (const todo of pendingReservationTodos) {
     assert.ok(todo.id.endsWith('-five-review'))
     assert.ok(!legacyCompleted.has(todo.id), `new reservation inherits completed state: ${todo.id}`)
@@ -115,13 +126,15 @@ try {
   assert.ok(appSource.includes("'book-milford-haven-five'"), 'Milford cruise purchase must auto-complete')
   assert.ok(appSource.includes("'book-skyline-gondola-luge-five'"), 'Skyline purchase must auto-complete')
   assert.ok(appSource.includes("'book-te-anau-glowworm-caves-five'"), 'Glowworm purchase must auto-complete')
+  assert.ok(appSource.includes("'book-cardrona-lift-pass-three'"), 'Cardrona three-person pass must auto-complete')
+  assert.ok(appSource.includes("'book-racers-edge-rental-three'"), 'Racers Edge rental must auto-complete')
   assert.ok(appSource.includes("'book-all-stays'"), 'legacy lodging migration preserved')
   for (const id of ['book-chc-outbound-extra', 'book-car', 'book-wanaka-doug-ledgerwood', 'book-pinewood-original', 'book-tekapo-coulson-lane']) {
     assert.ok(appSource.includes(`'${id}'`) && allTodos.some(todo => todo.id === id), `${id} completion preserved`)
   }
   const prepHtml = renderToStaticMarkup(createElement(PrepPage, { completedTodoIds: [...legacyCompleted, ...bookedIds], onToggleTodo: noop }))
-  assert.ok(prepHtml.includes('Skyline、萤火虫洞与 Milford 已购'))
-  for (const word of ['萤火虫洞', 'Burton Step On', '3,323.55', '1,777.90', '2,979.37']) assert.ok(prepHtml.includes(word))
+  assert.ok(prepHtml.includes('Skyline、萤火虫洞、Milford、Cardrona 三人雪票与 Racers Edge 雪具已购'))
+  for (const word of ['萤火虫洞', 'Racers Edge', '3,323.55', '1,777.90', '2,979.37', 'CT291054', '251514190424594']) assert.ok(prepHtml.includes(word))
 
   const activeText = JSON.stringify(trip.tripDays) + JSON.stringify(trip.contextCards)
     + JSON.stringify(trip.prepBudgetCards) + JSON.stringify(trip.todoGroups) + itinerary + readme
@@ -154,6 +167,12 @@ try {
     const glowwormCard = cards.find(card => card.label === '萤火虫洞已购')
     assert.equal(glowwormCard.value, '¥2,979.37 / 5 人')
     assert.match(glowwormCard.note, /15:15/)
+    const cardronaCard = cards.find(card => card.label === 'Cardrona 雪票已购')
+    assert.equal(cardronaCard.value, 'NZ$552 / 3 人')
+    assert.match(cardronaCard.note, /CT291054/)
+    const rentalCard = cards.find(card => card.label === 'Racers Edge 雪具已购')
+    assert.equal(rentalCard.value, 'NZ$255 / 3 人')
+    assert.match(rentalCard.note, /251514190424594/)
   }
   const day8 = dayMap.get('day-8')
   assert.match(day8.summary, /Skyline.*已购/)
@@ -166,9 +185,18 @@ try {
   for (const stale of [/原 4 人.{0,20}已购/, /原 4 位.{0,20}已购/, /Cardrona.{0,40}已购买/, /不把付费观星团设为必做/]) {
     assert.ok(!stale.test(activeText), `stale booking wording: ${stale}`)
   }
-  const ski = activityTodos.find(todo => todo.id === 'book-cardrona-five-review')
-  assert.match(ski.amount, /五人全部未订/)
-  assert.ok(activityTodos.some(todo => todo.id === 'book-burton-step-on-five-review'))
+  assert.ok(!activeText.includes('book-cardrona-five-review'))
+  assert.ok(!activeText.includes('book-burton-step-on-five-review'))
+  const day6 = dayMap.get('day-6')
+  assert.match(day6.summary, /CT291054/)
+  assert.match(day6.summary, /251514190424594/)
+  assert.match(day6.summary, /2 人不上雪/)
+  assert.ok(day6.timeline.some(item => /2 人留在 Base|不上雪道/.test(item.title + item.detail)))
+  assert.ok(day6.timeline.some(item => item.detail.includes('22 Ardmore')))
+  assert.ok(day6.todos.some(todo => todo.includes('CT291054')))
+  assert.ok(day6.todos.some(todo => todo.includes('251514190424594')))
+  const day5 = dayMap.get('day-5')
+  assert.ok(day5.timeline.some(item => item.title.includes('Racers Edge') && item.detail.includes('251514190424594')))
   const day9 = dayMap.get('day-9')
   assert.match(day9.summary, /15:15/)
   assert.match(day9.summary, /2,979\.37/)
@@ -238,7 +266,7 @@ try {
   }
   assert.ok(!appSource.includes('wanaka-cancellation'), 'cancellation must not be auto-completed')
 
-  console.log('PASS: paid stargazing removed; Skyline, glowworm and Milford remain booked; 3 activities + Step On and 12 main restaurants remain pending review.')
+  console.log('PASS: paid stargazing removed; Skyline, glowworm, Milford, Cardrona passes and Racers Edge rentals remain booked; 2 activities and 12 main restaurants remain pending review.')
   console.log('PASS: context references, SSR pages, legacy completion isolation, lodging total and return-car boundaries.')
   console.log('PASS: latest lodging plan RMB 43,033.03 + Hampshire pending RMB 1,177.62 = provisional lodging total RMB 44,210.65; Pinewood fifth bed remains explicit.')
 } finally {

@@ -27,7 +27,7 @@ type AdditionalActivity = {
 }
 
 export const activityBookingNotice =
-  '已购三项：10.01 Skyline 缆车 + 每人 3 次 Luge，五人实付 ¥1,777.90；10.02 Te Anau Glowworm Caves 15:15 班次，五人实付 ¥2,979.37；10.03 RealNZ 避风港号游船，五人实付 ¥3,323.55。其余活动、滑雪雪票、Step On 雪具和餐厅仍未预订；正式预订前统一 review 日期、五人余位、实际班次、装备、总价、退改和当日衔接。'
+  '已购五项：10.01 Skyline 缆车 + 每人 3 次 Luge，五人实付 ¥1,777.90；10.02 Te Anau Glowworm Caves 15:15 班次，五人实付 ¥2,979.37；10.03 RealNZ 避风港号游船，五人实付 ¥3,323.55；09.29 Cardrona 三人单日票，订单 CT291054，实付 NZ$552；09.29 Racers Edge 三人 Performance Snowboard Set + Helmet，订单 251514190424594，实付 NZ$255。其余活动与餐厅仍未预订；正式预订前统一 review 日期、人数、班次、总价、退改和当日衔接。'
 
 export const additionalActivities: AdditionalActivity[] = [
   {

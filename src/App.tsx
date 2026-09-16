@@ -63,6 +63,14 @@ const todoCompletionMigrations = [
     id: '2026-09-16-te-anau-glowworm-caves-booked-v1',
     completedTodoIds: ['book-te-anau-glowworm-caves-five'],
   },
+  {
+    id: '2026-09-16-cardrona-lift-pass-three-v1',
+    completedTodoIds: ['book-cardrona-lift-pass-three'],
+  },
+  {
+    id: '2026-09-16-racers-edge-rental-three-v1',
+    completedTodoIds: ['book-racers-edge-rental-three'],
+  },
 ]
 
 const defaultState: AppState = {
