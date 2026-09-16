@@ -40,18 +40,28 @@ try {
     assert.deepEqual([activity.dayId, activity.date], expectedDates.get(activity.id))
     const day = dayMap.get(activity.dayId)
     const context = trip.contextCardMap.get(activity.id)
-    assert.ok(context && context.tags.includes('待预订') && context.tags.includes('下单前 review'))
-    assert.ok(day.timeline.some(item => item.contextIds?.includes(activity.id) && /待订/.test(item.title)))
+    const purchased = Boolean(activity.purchased)
+    assert.ok(context)
+    if (purchased) {
+      assert.ok(context.tags.includes('已购') && context.tags.includes(activity.purchased.departure))
+      assert.ok(day.timeline.some(item => item.contextIds?.includes(activity.id) && /已购/.test(item.title)))
+      assert.ok(activityTodos.some(todo => todo.id === `book-${activity.id}-five` && /已购买/.test(todo.text)))
+      assert.match(activity.price, /2,979\.37/)
+      assert.match(activity.plan, /15:15/)
+    } else {
+      assert.ok(context.tags.includes('待预订') && context.tags.includes('下单前 review'))
+      assert.ok(day.timeline.some(item => item.contextIds?.includes(activity.id) && /待订/.test(item.title)))
+      assert.ok(activityTodos.some(todo => todo.id === `book-${activity.id}-five-review`))
+      assert.match(activity.plan, /review/)
+    }
     assert.ok(day.previewContextIds.includes(activity.id))
     assert.ok(day.reviewChecks.some(check => check.id === `review-${activity.id}`))
     assert.ok(day.localFeatureGroups.some(group => group.cards?.some(card => card.id === `feature-${activity.id}`)))
-    assert.ok(activityTodos.some(todo => todo.id === `book-${activity.id}-five-review`))
     assert.match(activity.review, /五人/)
-    assert.match(activity.plan, /review/)
     assert.match(activity.fallback, /退款|预约/)
     assert.ok(itinerary.includes(activity.name) && readme.includes(activity.name))
     const modalHtml = renderToStaticMarkup(createElement(ContextModal, { card: context, closing: false, onClose: noop }))
-    assert.ok(modalHtml.includes('五人待预订'))
+    assert.ok(modalHtml.includes(purchased ? '五人已购' : '五人待预订'))
     const dayHtml = renderToStaticMarkup(createElement(DayDetailPage, {
       day, completedTodos: [], liked: false,
       onToggleTodo: noop, onToggleLike: noop, onSelectPlan: noop, onOpenContext: noop,
@@ -70,7 +80,7 @@ try {
   }
   verifyContextReferences(trip.tripDays)
 
-  // Pending reservations must not inherit older checkboxes; Milford and Skyline are confirmed purchases.
+  // Pending reservations must not inherit older checkboxes; purchased activities auto-complete.
   const legacyCompleted = new Set([
     'book-cardrona-ski', 'book-cardrona-fifth', 'record-cardrona-order',
     'book-real-guns-five', 'book-milford-five', 'book-hydro-attack-five', 'book-skyline-five',
@@ -79,7 +89,8 @@ try {
   ])
   const milfordBooking = activityTodos.find(todo => todo.id === 'book-milford-haven-five')
   const skylineBooking = activityTodos.find(todo => todo.id === 'book-skyline-gondola-luge-five')
-  const bookedIds = new Set(['book-milford-haven-five', 'book-skyline-gondola-luge-five'])
+  const glowwormBooking = activityTodos.find(todo => todo.id === 'book-te-anau-glowworm-caves-five')
+  const bookedIds = new Set(['book-milford-haven-five', 'book-skyline-gondola-luge-five', 'book-te-anau-glowworm-caves-five'])
   const pendingReservationTodos = [...activityTodos.filter(todo => !bookedIds.has(todo.id)), ...dining.diningBookingTodos]
   assert.ok(milfordBooking)
   assert.match(milfordBooking.text, /已购买/)
@@ -90,6 +101,11 @@ try {
   assert.match(skylineBooking.text, /已购买/)
   assert.match(skylineBooking.amount, /1,777\.90/)
   assert.match(skylineBooking.note, /每人 3 次 Luge/)
+  assert.ok(glowwormBooking)
+  assert.match(glowwormBooking.text, /已购买/)
+  assert.match(glowwormBooking.amount, /2,979\.37/)
+  assert.match(glowwormBooking.note, /15:15/)
+  assert.match(glowwormBooking.note, /14:45/)
   for (const todo of pendingReservationTodos) {
     assert.ok(todo.id.endsWith('-five-review'))
     assert.ok(!legacyCompleted.has(todo.id), `new reservation inherits completed state: ${todo.id}`)
@@ -98,13 +114,14 @@ try {
   assert.ok(!appSource.includes("'book-cardrona-ski'"), 'ski must not auto-complete')
   assert.ok(appSource.includes("'book-milford-haven-five'"), 'Milford cruise purchase must auto-complete')
   assert.ok(appSource.includes("'book-skyline-gondola-luge-five'"), 'Skyline purchase must auto-complete')
+  assert.ok(appSource.includes("'book-te-anau-glowworm-caves-five'"), 'Glowworm purchase must auto-complete')
   assert.ok(appSource.includes("'book-all-stays'"), 'legacy lodging migration preserved')
   for (const id of ['book-chc-outbound-extra', 'book-car', 'book-wanaka-doug-ledgerwood', 'book-pinewood-original', 'book-tekapo-coulson-lane']) {
     assert.ok(appSource.includes(`'${id}'`) && allTodos.some(todo => todo.id === id), `${id} completion preserved`)
   }
   const prepHtml = renderToStaticMarkup(createElement(PrepPage, { completedTodoIds: [...legacyCompleted, ...bookedIds], onToggleTodo: noop }))
-  assert.ok(prepHtml.includes('Skyline 与 Milford 已购'))
-  for (const word of ['萤火虫洞', 'Burton Step On', '3,323.55', '1,777.90']) assert.ok(prepHtml.includes(word))
+  assert.ok(prepHtml.includes('Skyline、萤火虫洞与 Milford 已购'))
+  for (const word of ['萤火虫洞', 'Burton Step On', '3,323.55', '1,777.90', '2,979.37']) assert.ok(prepHtml.includes(word))
 
   const activeText = JSON.stringify(trip.tripDays) + JSON.stringify(trip.contextCards)
     + JSON.stringify(trip.prepBudgetCards) + JSON.stringify(trip.todoGroups) + itinerary + readme
@@ -134,6 +151,9 @@ try {
     const skylineCard = cards.find(card => card.label === 'Skyline 已购')
     assert.equal(skylineCard.value, '¥1,777.90 / 5 人')
     assert.match(skylineCard.note, /每人 3 次 Luge/)
+    const glowwormCard = cards.find(card => card.label === '萤火虫洞已购')
+    assert.equal(glowwormCard.value, '¥2,979.37 / 5 人')
+    assert.match(glowwormCard.note, /15:15/)
   }
   const day8 = dayMap.get('day-8')
   assert.match(day8.summary, /Skyline.*已购/)
@@ -149,6 +169,16 @@ try {
   const ski = activityTodos.find(todo => todo.id === 'book-cardrona-five-review')
   assert.match(ski.amount, /五人全部未订/)
   assert.ok(activityTodos.some(todo => todo.id === 'book-burton-step-on-five-review'))
+  const day9 = dayMap.get('day-9')
+  assert.match(day9.summary, /15:15/)
+  assert.match(day9.summary, /2,979\.37/)
+  assert.ok(day9.timeline.some(item => item.title.includes('已购 Te Anau 萤火虫洞') && item.detail.includes('2,979.37')))
+  assert.ok(day9.timeline.some(item => item.time.includes('15:15') && item.time.includes('14:45')))
+  assert.ok(day9.todos.some(todo => todo.includes('已购 10.02 萤火虫洞') && todo.includes('2,979.37')))
+  assert.ok(!activeText.includes('book-te-anau-glowworm-caves-five-review'))
+  assert.ok(!activeText.includes('萤火虫洞待订'))
+  assert.ok(!activeText.includes('NZ$725'))
+  assert.ok(!activeText.includes('暂留窗口'))
   assert.ok(dayMap.get('day-9').timeline.some(item => item.time === '10:00' && item.title.includes('出发')))
   assert.ok(dayMap.get('day-4').timeline.some(item => item.time.includes('17:00') && item.title.includes('Birch Hill')))
   for (const removedStargazing of ['tekapo-summit-stargazing', 'summit-stargazing', 'the-summit-experience', 'Summit Experience', '正式观星待订', 'Summit 五人正式观星']) {
@@ -208,7 +238,7 @@ try {
   }
   assert.ok(!appSource.includes('wanaka-cancellation'), 'cancellation must not be auto-completed')
 
-  console.log('PASS: paid stargazing removed; Skyline and Milford remain booked; 4 activities + Step On and 12 main restaurants remain pending review.')
+  console.log('PASS: paid stargazing removed; Skyline, glowworm and Milford remain booked; 3 activities + Step On and 12 main restaurants remain pending review.')
   console.log('PASS: context references, SSR pages, legacy completion isolation, lodging total and return-car boundaries.')
   console.log('PASS: latest lodging plan RMB 43,033.03 + Hampshire pending RMB 1,177.62 = provisional lodging total RMB 44,210.65; Pinewood fifth bed remains explicit.')
 } finally {

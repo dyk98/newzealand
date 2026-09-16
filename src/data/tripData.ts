@@ -23,7 +23,7 @@ import { activityBookingNotice, additionalActivityBookingTodos, additionalActivi
 
 export const tripParty = {
   size: 5,
-  notice: '现为 5 人同行，09.28–09.30 统一入住 Doug Ledgerwood Drive, Wānaka 的房源，两晚总价 ¥5,830.82 人民币。已购 Skyline 缆车 + 每人 3 次 Luge（¥1,777.90）和 RealNZ 避风港号游船（¥3,323.55）；其余活动、滑雪雪票、Step On 雪具和餐厅仍待预订。',
+  notice: '现为 5 人同行，09.28–09.30 统一入住 Doug Ledgerwood Drive, Wānaka 的房源，两晚总价 ¥5,830.82 人民币。已购 Skyline 缆车 + 每人 3 次 Luge（¥1,777.90）、Te Anau 萤火虫洞 15:15 班次（¥2,979.37）和 RealNZ 避风港号游船（¥3,323.55）；其余活动、滑雪雪票、Step On 雪具和餐厅仍待预订。',
 }
 
 const img = {
@@ -685,17 +685,17 @@ export const contextCards: ContextCard[] = [
     cn: 'Queenstown 到 Te Anau / Milford 前夜移动',
     image: img.teAnau,
     body:
-      'Day 9 为新增萤火虫洞下午团提前至 10:00 出发，目标中午到 Te Anau，先完成午餐、补给与入住。洞穴团实际班次、晚餐和次日 Milford 准备在正式下单前一起 review。',
+      'Day 9 为已购萤火虫洞 15:15 班次提前至 10:00 出发，目标中午到 Te Anau，先完成午餐、补给与入住，14:45 到湖边报到。晚餐仍待订，次日 Milford 准备不要挤掉。',
     tags: ['约 2h–2h45m', 'Milford 前夜', '不绕路'],
-    quickFacts: ['10:00 出发', '约 12:30–12:45 抵达目标', '萤火虫洞下午团待订'],
+    quickFacts: ['10:00 出发', '约 12:30–12:45 抵达目标', '萤火虫洞 15:15 已购'],
     sections: [
       {
         title: '难点',
-        body: '这段不是最难开，但容易因为 Queenstown 退房、停车和临时购物拖晚。拖晚会直接影响 Milford 前夜准备。',
+        body: '这段不是最难开，但容易因为 Queenstown 退房、停车和临时购物拖晚。拖晚会错过 14:45 洞穴报到。',
       },
       {
         title: '当天边界',
-        body: '萤火虫洞已加入下午计划，但尚未预订；入住不能默认早于 14:00。先 review 实际签到、返抵与 18:30 晚餐，班次不合适就恢复休息，不追加深夜团或远路活动。',
+        body: '萤火虫洞五人已购 15:15 班次，14:45 报到，约 17:30 返回。入住不能默认早于 14:00。延误先联系 RealNZ，不改深夜团；18:30 The Redcliff 仍待订。',
       },
     ],
     respectTips: ['这天不要临时绕远看景。', '副驾提前把 Te Anau 停车和住宿位置设好。'],
@@ -1109,7 +1109,7 @@ export const contextCards: ContextCard[] = [
     cn: 'Te Anau 午餐 + Redcliff 峡湾前夜晚餐',
     image: img.teAnau,
     body:
-      '提前至 10:00 从 Queenstown 出发，中午在 Te Anau 午餐和采购；14:00 起入住后参加拟订的萤火虫洞下午团，再衔接 18:30 The Redcliff。两项均待订，正式下单前一起 review。',
+      '提前至 10:00 从 Queenstown 出发，中午在 Te Anau 午餐和采购；14:00 起入住后参加已购 15:15 萤火虫洞，约 17:30 回镇上，再衔接 18:30 The Redcliff。晚餐仍待订。',
     tags: ['五人无忌口', '预算不限', '餐厅待订'],
     quickFacts: ['午餐：镇中心 / Sandfly', '去洞穴前买好次日补给', '18:30 Redcliff（拟订）'],
     links: [
@@ -1125,7 +1125,7 @@ export const contextCards: ContextCard[] = [
       },
       {
         title: '峡湾前夜',
-        body: '目标 18:30 五人入座，与萤火虫洞实际返抵时间一起 review。午餐后采购 Milford 早餐补给，晚餐后回酒店整理休息；两项均未预订。',
+        body: '目标 18:30 五人入座；萤火虫洞约 17:30 返回，留约一小时换衣和走路。午餐后采购 Milford 早餐补给，晚餐后回酒店整理休息。Redcliff 尚未订位。',
       },
     ],
   },
@@ -1866,7 +1866,7 @@ export const contextCards: ContextCard[] = [
       },
       {
         title: '这趟怎么用 Te Anau',
-        body: 'Te Anau 是 Milford 前后的休息基地。Day 9 下午完成补给、加油和早点休息；Day 10 自驾到 Milford、乘已购游船后原路返回，不再赶回 Queenstown；Day 11 再轻松回皇后镇。',
+        body: 'Te Anau 是 Milford 前后的休息基地。Day 9 下午先补给并入住，再去已购 15:15 萤火虫洞，约 17:30 回镇上吃晚餐；Day 10 自驾到 Milford、乘已购游船后原路返回，不再赶回 Queenstown；Day 11 再轻松回皇后镇。',
       },
       {
         title: '不要安排过满',
@@ -4729,27 +4729,27 @@ export const tripDays: TripDay[] = [
     shortTitle: 'Te Anau 萤火虫洞与峡湾前夜',
     cities: 'Queenstown -> Te Anau',
     temperature: '约 4–16°C',
-    summary: '10:00 从 Queenstown 出发，午餐、采购并入住后预留萤火虫洞下午团；五人待订，正式下单前 review 班次与 18:30 The Redcliff 晚餐衔接。',
+    summary: '10:00 从 Queenstown 出发，午餐、采购并入住后参加已购 15:15 萤火虫洞，实付 ¥2,979.37；约 17:30 回镇上，衔接 18:30 The Redcliff 晚餐待订。',
     heroImage: img.teAnau,
     heroAlt: 'Lake Te Anau 湖面、湖岸与远山',
     focus: 'Milford 前夜',
-    focusNote: '新增萤火虫洞 / 下单前 review',
+    focusNote: '萤火虫洞 15:15 已购',
     routeSteps: [
       { label: '出发', name: 'Queenstown', note: '退房' },
       { label: '住宿', name: 'Distinction Luxmore Hotel', note: '41 Town Centre / 连住 2 晚' },
-      { label: '新增待订', name: 'Glowworm Caves', note: '下午场 / 班次待 review' },
+      { label: '已购', name: 'Glowworm Caves', note: '15:15 / 14:45 报到' },
       { label: '准备', name: 'Milford 自驾 + 已购游船', note: '加满油 / 12:45 报到' },
     ],
     metrics: [
       { label: '驾驶', value: '约 2h–2h45m' },
-      { label: '洞穴团', value: '含签到暂留约 3h' },
+      { label: '洞穴团', value: '15:15 已购 / 约 2h15m' },
     ],
     timeline: [
       {
         time: '08:00–09:45',
         title: '起床、早餐、退房',
         meta: '里斯酒店&豪华公寓',
-        detail: '早餐按 Rees 确认单安排，未含餐者提前准备简餐或加购。为新增萤火虫洞下午团提前出发，目标 09:45 完成退房、10:00 驶离 Queenstown；班次尚未预订，下单前一起 review。',
+        detail: '早餐按 Rees 确认单安排，未含餐者提前准备简餐或加购。为已购 15:15 萤火虫洞提前出发，目标 09:45 完成退房、10:00 驶离 Queenstown，给 14:45 报到留余量。',
         tone: 'sun',
         icon: CalendarDays,
         contextIds: ['queenstown'],
@@ -4767,7 +4767,7 @@ export const tripDays: TripDay[] = [
         time: '约 12:30–12:45',
         title: '抵达 Te Anau，午餐与采购',
         meta: 'Te Anau Town Centre / Lakefront',
-        detail: '按 10:00 出发及约 2h–2h45m 车程预留，不为赶洞穴团超速。先吃午餐、采购 Milford 次日早餐和水，再办理入住；长时间湖边散步让位给下午团。到达明显延误时联系酒店和活动商家处理预约。',
+        detail: '按 10:00 出发及约 2h–2h45m 车程预留，不为赶 14:45 报到超速。先吃午餐、采购 Milford 次日早餐和水，再办理入住；长时间湖边散步让位给已购洞穴团。到达明显延误时联系酒店和 RealNZ。',
         tone: 'food',
         icon: Utensils,
         contextIds: ['te-anau', 'day-9-food-plan'],
@@ -4776,17 +4776,17 @@ export const tripDays: TripDay[] = [
         time: '14:00 起（按确认单）',
         title: '抵达 The Distinction Luxmore Hotel 入住',
         meta: '41 Town Centre, Te Anau, New Zealand（蒂阿瑙，新西兰）',
-        detail: '10.02 入住、10.04 退房，两晚总价 ¥4,517.62 人民币。普通入住为 14:00 起，以实际确认单为准；不能默认更早拿房。先办理入住和停车，再前往 85 Lakefront Drive 参加已订成的洞穴团；下单前 review 入住、签到与班次，必要时提前询问寄存行李。',
+        detail: '10.02 入住、10.04 退房，两晚总价 ¥4,517.62 人民币。普通入住为 14:00 起，以实际确认单为准；不能默认更早拿房。先办理入住和停车，再步行前往 85 Lakefront Drive，14:45 报到参加已购 15:15 洞穴团；必要时提前询问寄存行李。',
         tone: 'booking',
         icon: CheckCircle2,
         featured: true,
         contextIds: ['te-anau', 'te-anau-glowworm-caves', 'milford', 'day-9-food-plan'],
       },
       {
-        time: '约 14:30–17:30（暂留窗口）',
-        title: 'Te Anau 萤火虫洞下午团（待订）',
-        meta: 'RealNZ Visitor Centre, 85 Lakefront Drive / 五人',
-        detail: '已加入计划，尚未预订。此窗口包括提前 30 分钟签到和约 2.5 小时体验，不代表已确认发船或返抵时间。下单前一起 review 五人余位、酒店入住与 18:30 晚餐；洞内禁拍，入口需弯腰并有台阶。班次不合适就保留休息，不自动改成深夜团。',
+        time: '14:45 报到 / 15:15 开船',
+        title: '已购 Te Anau 萤火虫洞 15:15 班次',
+        meta: 'RealNZ Visitor Centre, 85 Lakefront Drive / 五人已购 ¥2,979.37',
+        detail: '五人已购，实付 ¥2,979.37 人民币。14:45 到 RealNZ Visitor Centre 报到，15:15 开船，体验约 2 小时 15 分，约 17:30 返回。洞内禁拍，入口需弯腰并有台阶。延误先联系 RealNZ，不默认改更晚班次。',
         tone: 'booking',
         icon: Ship,
         featured: true,
@@ -4796,25 +4796,25 @@ export const tripDays: TripDay[] = [
         time: '18:30（拟订）',
         title: 'The Redcliff 五人晚餐（待订）',
         meta: '12 Mokonui Street, Te Anau 9600, New Zealand',
-        detail: '目标 18:30 五人入座，正式订位前与萤火虫洞实际返抵时间一起 review。出发去洞穴前准备好次日早餐和随身补给，晚餐后回 Luxmore 整理并休息，不再叠加夜间项目。',
+        detail: '目标 18:30 五人入座；萤火虫洞约 17:30 返回，留约一小时换衣和走路。出发去洞穴前准备好次日早餐和随身补给，晚餐后回 Luxmore 整理并休息，不再叠加夜间项目。',
         tone: 'rest',
         icon: BedDouble,
         contextIds: ['dining-redcliff', 'day-9-food-plan'],
       },
     ],
     accommodation: 'The Distinction Luxmore Hotel｜41 Town Centre, Te Anau, New Zealand｜10.02–10.04 两晚合计 ¥4,517.62 人民币',
-    intensity: '自驾约 2h–2h45m + 萤火虫洞下午团，需提前出发',
-    note: '新增洞穴团占用原休息下午；班次、入住与晚餐一起 review 后再下单，仍保留 Milford 前夜睡眠。',
+    intensity: '自驾约 2h–2h45m + 已购 15:15 萤火虫洞，需提前出发',
+    note: '洞穴团已购 15:15，约 17:30 返回；Redcliff 仍待订。仍保留 Milford 前夜睡眠，不改深夜洞穴班次。',
     todos: [
       '归档 The Distinction Luxmore Hotel 新确认单：10.02–10.04｜41 Town Centre, Te Anau｜两晚 ¥4,517.62 人民币；核对房型、五人登记和早餐',
       '保存 10.03 RealNZ 避风港号五人船票：已购实付 ¥3,323.55 人民币｜12:45 报到；确认单程只含游船，不含 Te Anau 往返交通',
-      '正式下单前一起 review 10.02 萤火虫洞五人下午团：提前 30 分钟签到、实际班次、返抵、退改和 18:30 The Redcliff 衔接；尚未预订',
+      '保存已购 10.02 萤火虫洞五人订单：实付 ¥2,979.37 人民币｜15:15 开船｜14:45 报到｜约 17:30 返回；核对退改和洞穴通行条件',
       '出发前查 NZTA Journey Planner，确认 Queenstown -> Te Anau 路段正常',
       '给租车加满油，下载 SH94 离线地图和停车图；确认雪链适配并会安全安装，主付费停车场作为唯一停车方案',
       '确认 Luxmore 新订单是否含 10.03 早餐及份数、供应时间；未含餐或无法衔接 08:15 自驾出发就提前准备五人简餐',
-      'review 后预订 10.02 The Redcliff 晚餐：五人无忌口；与萤火虫洞返抵一起确认时段、菜单、总价与退改，尚未订位',
+      'review 后预订 10.02 The Redcliff 晚餐：五人无忌口；洞穴团约 17:30 返回，目标 18:30 入座；确认时段、菜单、总价与退改，尚未订位',
     ],
-    importantTip: '10:00 提前出发给萤火虫洞留时间；14:30–17:30 只是占位窗口，不是已订班次。不能牺牲次日 Milford 的准备与休息。',
+    importantTip: '10:00 出发，14:00 入住后 14:45 到湖边报到；15:15 开船，约 17:30 返回。不能牺牲次日 Milford 的准备与休息。',
     reviewChecks: [
       additionalActivityReviewChecks['te-anau-glowworm-caves'],
       {
@@ -4842,7 +4842,7 @@ export const tripDays: TripDay[] = [
     ],
     dailyRecommendation: {
       title: '今天默认推荐',
-      summary: '10:00 离开 Queenstown，中午午餐和采购，14:00 起入住 Luxmore，下午新增萤火虫洞待订。与 18:30 The Redcliff 一起 review 班次后再下单。',
+      summary: '10:00 离开 Queenstown，中午午餐和采购，14:00 起入住 Luxmore，14:45 报到参加已购 15:15 萤火虫洞；约 17:30 返回后衔接 18:30 The Redcliff（待订）。',
       items: [
         {
           label: '午餐默认',
@@ -4851,13 +4851,13 @@ export const tripDays: TripDay[] = [
         },
         {
           label: '活动默认',
-          value: 'Te Anau 萤火虫洞下午团（待订）',
-          note: '替换下午长时间湖边散步，不叠加影院；具体班次、入住与晚餐一起 review。',
+          value: 'Te Anau 萤火虫洞 15:15 已购',
+          note: '实付 ¥2,979.37；14:45 报到，约 17:30 返回。不叠加影院。',
         },
         {
           label: '峡湾前夜晚餐',
           value: 'The Redcliff（待订）',
-          note: '目标 18:30 五人入座，实际以洞穴团返抵和餐厅确认单为准；晚餐后准备 Milford 并休息。',
+          note: '目标 18:30 五人入座；洞穴团约 17:30 返回。晚餐后准备 Milford 并休息。',
         },
       ],
     },
@@ -4897,7 +4897,7 @@ export const tripDays: TripDay[] = [
             image: img.teAnau,
             imageAlt: 'Te Anau 湖区傍晚景色',
             body:
-              '10.02 晚餐主选 The Redcliff，目标 18:30 五人入座，与新增萤火虫洞下午团一起 review。若无位可联系 The Fat Duck 或 The Ranch；The Fat Duck 主安排在 10.03，调换前核对两晚订位。晚餐后回酒店整理 Milford 随身物品。',
+              '10.02 晚餐主选 The Redcliff，目标 18:30 五人入座；已购萤火虫洞约 17:30 返回。若无位可联系 The Fat Duck 或 The Ranch；The Fat Duck 主安排在 10.03，调换前核对两晚订位。晚餐后回酒店整理 Milford 随身物品。',
             tags: ['提前看位', '18:00-18:30', 'The Ranch 兜底'],
             links: [
               { label: 'The Fat Duck', url: 'https://www.thefatduck.co.nz/' },
@@ -4918,13 +4918,13 @@ export const tripDays: TripDay[] = [
       {
         id: 'day-9-sights',
         eyebrow: 'Sights',
-        title: '萤火虫洞主计划 / 未订成时的备选',
-        summary: '萤火虫洞已加入五人待订计划，正式下单前 review；湖边和影院只在未订成或取消后择一，不额外叠加。',
+        title: '已购萤火虫洞 / 运营取消后的备选',
+        summary: '萤火虫洞五人已购 15:15 班次，实付 ¥2,979.37；湖边和影院只在运营取消后择一，不额外叠加。',
         cards: [
           additionalActivityFeatureCards['te-anau-glowworm-caves'],
           {
             id: 'day-9-lake-te-anau',
-            tag: '团未订成时备选',
+            tag: '运营取消后备选',
             title: 'Lake Te Anau 湖边短走',
             subtitle: '抵达后散步、看湖、恢复车程',
             image: img.teAnau,
@@ -4949,7 +4949,7 @@ export const tripDays: TripDay[] = [
       },
     ],
     previewContextIds: ['te-anau-glowworm-caves', 'milford', 'dining-redcliff'],
-    tags: ['移动日', '萤火虫洞待订', '下单前 review'],
+    tags: ['移动日', '萤火虫洞已购', '15:15'],
     early: false,
     longTransit: false,
     freeDay: false,
@@ -6960,7 +6960,7 @@ export const todoGroups: TodoGroup[] = [
     id: 'activities',
     eyebrow: 'Book',
     title: '景点 / 活动',
-    subtitle: 'Skyline 与 Milford 已购；其余 4 项活动 + Step On 雪具待订',
+    subtitle: 'Skyline、萤火虫洞与 Milford 已购；其余 3 项活动 + Step On 雪具待订',
     summary: activityBookingNotice,
     items: [
       {
@@ -7090,11 +7090,11 @@ export const overviewStats = [
   { label: '旅行天数', value: '15 天' },
   { label: '南岛自驾', value: '11 天' },
   { label: '核心早起', value: '3 天' },
-  { label: '待订活动', value: '4 项活动 + Step On 雪具', note: 'Skyline 与 Milford 五人票均已购；付费观星已取消' },
+  { label: '待订活动', value: '3 项活动 + Step On 雪具', note: 'Skyline、萤火虫洞与 Milford 五人票均已购；付费观星已取消' },
 ]
 
 export const budgetCards = [
-  { label: '活动 / 雪具', value: 'Skyline、Milford 已购', note: activityBookingNotice },
+  { label: '活动 / 雪具', value: 'Skyline、萤火虫洞、Milford 已购', note: activityBookingNotice },
   ...additionalActivityBudgetCards,
   { label: '餐饮安排', value: '预算不限 / 无忌口', note: '餐厅、酒配和接送按确认订单另计；公开样例不记为已付' },
   { label: '往返机票原订单', value: '¥51,467 / 原 4 人', note: '原单价 ¥12,866.75 / 人；第 5 人航班与实付待确认，不沿用旧票价作为新报价' },

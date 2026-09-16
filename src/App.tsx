@@ -59,6 +59,10 @@ const todoCompletionMigrations = [
     id: '2026-09-09-latest-tekapo-and-pinewood-stays-v1',
     completedTodoIds: ['book-pinewood-original', 'book-tekapo-coulson-lane'],
   },
+  {
+    id: '2026-09-16-te-anau-glowworm-caves-booked-v1',
+    completedTodoIds: ['book-te-anau-glowworm-caves-five'],
+  },
 ]
 
 const defaultState: AppState = {

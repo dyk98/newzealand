@@ -1,5 +1,5 @@
 # 2026 国庆新西兰行
-同行人数为 5 人，当前行程与活动预算按五人安排。09.28–09.30 统一入住 Doug Ledgerwood Drive, Wānaka, 奥塔戈 9305, 新西兰的房源，两晚总价 ¥5,830.82 人民币；完整门牌和入住说明以确认单为准。10.01 Skyline 缆车 + 每人 3 次 Luge 已购 ¥1,777.90，10.03 RealNZ 避风港号五人船票已购 ¥3,323.55；其余活动、雪票、雪具和餐厅仍待预订，正式下单前一起 review。
+同行人数为 5 人，当前行程与活动预算按五人安排。09.28–09.30 统一入住 Doug Ledgerwood Drive, Wānaka, 奥塔戈 9305, 新西兰的房源，两晚总价 ¥5,830.82 人民币；完整门牌和入住说明以确认单为准。10.01 Skyline 缆车 + 每人 3 次 Luge 已购 ¥1,777.90，10.02 Te Anau 萤火虫洞 15:15 班次已购 ¥2,979.37，10.03 RealNZ 避风港号五人船票已购 ¥3,323.55；其余活动、雪票、雪具和餐厅仍待预订，正式下单前一起 review。
 预算换算暂按 1 NZD ≈ 4 RMB，仅用于粗估；实际支付以当日汇率和发卡行费用为准。
 澳元预算粗按 1 AUD ≈ 4.8 RMB，实际以支付时汇率和发卡行费用为准。
 
@@ -62,16 +62,16 @@
 Crown Range 只在天气好、司机状态好时走；5–10 月无论 2WD、AWD 还是 4WD 都必须随车携带尺寸匹配的雪链。天气差、起雾、风大、没有合适雪链或司机对山路没信心，就改走 Cromwell 方向。10.03 SH94 Milford Road 在 6–11 月也可能要求携带或安装雪链；它没有替代道路，实时标志要求装链但无法安全满足时不进入，并联系 RealNZ 处理已购船票。
 
 ### 景点 / 活动
-已购两项：10.01 Skyline 缆车 + 每人 3 次 Luge，五人实付 ¥1,777.90；10.03 RealNZ 避风港号五人船票，实付 ¥3,323.55，订单报到时间 12:45。其余活动、滑雪雪票、Step On 雪具和餐厅仍未预订；正式下单前一起 review 五人余位、班次、总价、退改和当日衔接。交通、寄存和普通行前复核不混入待订列表。
+已购三项：10.01 Skyline 缆车 + 每人 3 次 Luge，五人实付 ¥1,777.90；10.02 Te Anau Glowworm Caves 15:15 班次，五人实付 ¥2,979.37，14:45 报到；10.03 RealNZ 避风港号五人船票，实付 ¥3,323.55，订单报到时间 12:45。其余活动、滑雪雪票、Step On 雪具和餐厅仍未预订；正式下单前一起 review 五人余位、班次、总价、退改和当日衔接。交通、寄存和普通行前复核不混入待订列表。
 
 1. 09.28 取具、09.29 使用（拟定）：Burton Step On 单板租赁，五人装备待订。门店、库存、套数、尺码、匹配雪鞋与固定器、头盔护具及取还时间地点下单前 review；普通 Complete Rental Bundle 不等于 Step On，不能默认 50 Cardrona Valley Road 就是取具点，不自动绕去 Queenstown。
 2. 09.29 Cardrona：五人单日雪票全部待订，所需课程按每个人经验 review；雪具按 Step On 配套落实，不重复买普通租赁。没有已购滑雪费用可计入预算。
 3. 09.30 Real Guns：五人射击待订，10:00 为优先询订目标，巴雷特 M99 和手枪需求须先获得明确答复。
 4. 10.01 上午 Hydro Attack：五人鲨鱼艇待订，相邻批次优先；10.04 下午只留天气改期，不重复买票。
 5. 10.01 下午 Skyline：五人 Gondola 缆车 + 每人 3 次 Luge 已购，实付 ¥1,777.90 人民币，不含山顶自助餐；保存二维码、实际可用时段和退改条款。
-6. 10.02 下午 Te Anau Glowworm Caves：五人萤火虫洞待订。10:00 从 Queenstown 出发，约 14:30–17:30 暂留签到和活动窗口；官网目的地页按约 2.5 小时介绍，另需提前 30 分钟签到。参考 NZ$145 / 成人起、五人 NZ$725 起，未支付。正式下单前 review 入住、实际班次、返抵、18:30 Redcliff 晚餐及退改；洞内禁拍，入口需弯腰并有台阶。官网：https://www.realnz.com/en/experiences/glowworm-caves/te-anau-glowworm-caves/。
+6. 10.02 下午 Te Anau Glowworm Caves：五人萤火虫洞已购，实付 ¥2,979.37 人民币。15:15 开船，14:45 到 RealNZ Visitor Centre 报到，体验约 2 小时 15 分，约 17:30 返回，衔接 18:30 Redcliff。洞内禁拍，入口需弯腰并有台阶。保存订单确认和退改条款。官网：https://www.realnz.com/en/experiences/glowworm-caves/te-anau-glowworm-caves/。
 7. 10.03 Milford Sound：RealNZ 特色游船避风港号 Haven 五人船票已购，实付 ¥3,323.55 人民币，12:45 报到；发船时间、订单号和餐食以确认单为准。Te Anau 往返改为 SH94 自驾，使用 Milford 主付费停车场，不去 Deepwater Basin 免费停车场。
-主线现为 6 项活动 + 1 项雪具租赁 + 12 顿餐厅，共 19 项；其中 Skyline 与 Milford 已购，剩余 4 项活动、1 项雪具和 12 顿餐厅，共 17 项待订。10.05 付费观星团已取消，不计入活动或预算；澳洲 2 家餐厅仍为条件性候选。
+主线现为 6 项活动 + 1 项雪具租赁 + 12 顿餐厅，共 19 项；其中 Skyline、萤火虫洞与 Milford 已购，剩余 3 项活动、1 项雪具和 12 顿餐厅，共 16 项待订。10.05 付费观星团已取消，不计入活动或预算；澳洲 2 家餐厅仍为条件性候选。
 
 09.30 新增 Real Guns New Zealand 五人监督实弹射击，尚未预订：优先询订 10:00 上午场，目标 09:45 签到，体验按约两小时预留，实际时段、时长和余位以店家确认为准。地址：1081 Cardrona Valley Road, Wānaka；官网：https://www.realguns.nz/；联系邮箱：info@realguns.nz。
 Real Guns 基础体验公开参考价 NZ$169 / 人，五人 NZ$845；巴雷特 M99（.50 BMG）属另付费项目，下单前确认当天供应、发数和加购价格。手枪是否向游客开放、具体枪型与费用尚未确认，只列为询问需求，不承诺可体验。参考：https://www.newzealand.com/in/plan/business/supervised-shooting-experience/。
@@ -79,7 +79,7 @@ Real Guns 基础体验公开参考价 NZ$169 / 人，五人 NZ$845；巴雷特 M
 尽快核对并预订 10.01 Hydro Attack 鲨鱼艇五人名额：五个人全部参加，每次 1 名乘客与 1 名驾驶员同乘；优先选择同一或相邻出发批次。当前官网 NZ$199 / 人，5 人 NZ$995，约 RMB 3,980；未来价格以订单为准
 10.01 Skyline Queenstown Gondola + 每人 3 次 Luge 已购：五人实付 ¥1,777.90 人民币。保存订单二维码、实际可用时段和退改条款；天气或 Luge 暂停时按订单规则处理。
 Queenstown 按 Hydro Attack 五人待订 + Skyline / Luge 五人已购执行；不安排蹦极、跳伞、峡谷秋千、TSS 或 Glenorchy。
-Real Guns + Hydro Attack 两项待订项目公开参考小计 NZ$1,840；Skyline 按实付 ¥1,777.90、Milford 按实付 ¥3,323.55 分别单列。滑雪雪票、Step On 和萤火虫洞最终报价未齐，不计算伪精确活动总额；付费观星已移除，活动费用不加入住宿合计。
+Real Guns + Hydro Attack 两项待订项目公开参考小计 NZ$1,840；Skyline 按实付 ¥1,777.90、萤火虫洞按实付 ¥2,979.37、Milford 按实付 ¥3,323.55 分别单列。滑雪雪票和 Step On 最终报价未齐，不计算伪精确活动总额；付费观星已移除，活动费用不加入住宿合计。
 
 ### 签证 / 证件
 澳洲签证原记录：原 4 人已获批，原费用 AUD 250 / 人、合计 AUD 1,000，预算折合约 RMB 4,800。第 5 人实际所需入境材料、状态和费用待确认；本路线涉及 09.25 墨尔本与 10.07 悉尼两次入境。
@@ -104,7 +104,7 @@ NZeTA 与 IVL 原实际支出：NZ$117 / 人（NZeTA NZ$17 + IVL NZ$100），原
 | 09.29 晚 | [Muttonbird](https://muttonbird.co.nz/contact)，33 Ardmore Street, Wanaka | 19:00；滑雪、还装备、洗漱后集合，延误时联系店家。 |
 | 09.30 晚 | [Botswana Butchery](https://botswanabutchery.nz/queenstown/)，17 Marine Parade, Queenstown | 18:30；Rees 入住后去市中心，景观座位只作请求。 |
 | 10.01 晚 | [True South Dining Room](https://therees.co.nz/food-wine/true-south-dining-room/)，Rees 酒店内 | 19:00；Skyline 下山后回酒店休息再用餐，不默认房费包含晚餐。 |
-| 10.02 晚 | [The Redcliff](https://theredcliff.co.nz/)，12 Mokonui Street, Te Anau | 18:30 目标；与新增萤火虫洞下午团一起 review 返抵时间，先买好 Milford 补给。 |
+| 10.02 晚 | [The Redcliff](https://theredcliff.co.nz/)，12 Mokonui Street, Te Anau | 18:30 目标；已购萤火虫洞约 17:30 返回后衔接，先买好 Milford 补给。 |
 | 10.03 晚 | [The Fat Duck Te Anau](https://www.thefatduck.co.nz/)，124 Town Centre | 19:30；询订时说明当天从 Milford 沿 SH94 自驾返回，确认迟到、改时和取消条款。 |
 | 10.04 晚 | [Amisfield Restaurant](https://amisfield.co.nz/pages/dining)，10 Lake Hayes Road | 18:30 起完整晚间品鉴；与午餐 Bistro 区分，优先订五人桌及往返接送。 |
 | 10.05 午 | [The Stoaker Room Cromwell](https://www.thestoakerroom.co.nz/reservations-cromwell)，180 State Highway 8B | 12:00–13:15；酒桶料理替换原 Omarama 午餐，司机不喝酒。 |
@@ -367,18 +367,18 @@ To-do：
 下载 Queenstown 市中心离线地图，收藏 Hydro Attack 柜台、Bespoke Kitchen、Skyline Base Terminal 和住宿。
 
 # 10.02 Day 9（第 9 天）Queenstown、Te Anau
-08:00-09:45 起床、早餐、整理行李并退房。按 Rees 确认单安排早餐，目标 09:45 办完，为新增萤火虫洞下午团提前至 10:00 出发。
-10:00 Queenstown 出发前往 Te Anau，基础车程约 2h–2h45m，另留路况和休息余量；不为赶洞穴团超速或临时绕路。
-约 12:30–12:45 抵达 Te Anau，午餐并采购 Milford 次日早餐、水和零食。长时间湖边散步让位给下午洞穴团。
-14:00 起（按确认单）办理 The Distinction Luxmore Hotel 入住，地址：41 Town Centre, Te Anau；10.02–10.04 两晚 ¥4,517.62 人民币。不能默认更早拿房；先处理入住与停车，再去 RealNZ Visitor Centre（85 Lakefront Drive）。若拟订班次衔接不了，先 review 调整，不靠未经确认的提前入住凑时间。
-约 14:30–17:30（暂留窗口）Te Anau Glowworm Caves 五人下午团，尚未预订。窗口包括提前 30 分钟签到和约 2.5 小时体验，不代表已确认发船或返抵。正式下单前 review 五人余位、实际班次、入住、洞穴通行条件、退改和晚餐衔接；洞内禁止拍照录像。无合适下午场则恢复湖边短走与休息，不自动改深夜团或叠加影院。
-18:30（拟订）The Redcliff 五人晚餐，12 Mokonui Street, Te Anau；与洞穴团实际返抵时间一起 review 后再下单，晚餐后回酒店准备 Milford 并休息。
+08:00-09:45 起床、早餐、整理行李并退房。按 Rees 确认单安排早餐，目标 09:45 办完，为已购 15:15 萤火虫洞提前至 10:00 出发。
+10:00 Queenstown 出发前往 Te Anau，基础车程约 2h–2h45m，另留路况和休息余量；不为赶 14:45 报到超速或临时绕路。
+约 12:30–12:45 抵达 Te Anau，午餐并采购 Milford 次日早餐、水和零食。长时间湖边散步让位给已购下午洞穴团。
+14:00 起（按确认单）办理 The Distinction Luxmore Hotel 入住，地址：41 Town Centre, Te Anau；10.02–10.04 两晚 ¥4,517.62 人民币。不能默认更早拿房；先处理入住与停车，再去 RealNZ Visitor Centre（85 Lakefront Drive）14:45 报到。
+14:45 报到、15:15 开船 Te Anau Glowworm Caves 五人已购下午团，实付 ¥2,979.37 人民币。体验约 2 小时 15 分，约 17:30 返回；洞内禁止拍照录像，入口需弯腰并有台阶。延误先联系 RealNZ，不自动改深夜团或叠加影院。
+18:30（拟订）The Redcliff 五人晚餐，12 Mokonui Street, Te Anau；洞穴团约 17:30 返回后衔接，晚餐后回酒店准备 Milford 并休息。
 住宿：The Distinction Luxmore Hotel（10.02–10.04 两晚合计 ¥4,517.62 人民币）。
-当天节奏：自驾约 2h–2h45m + 萤火虫洞下午团，含签到另留约三小时；需提前出发。
+当天节奏：自驾约 2h–2h45m + 已购 15:15 萤火虫洞，14:45 报到；需提前出发。
 备注：Milford 前一晚尽量不要熬太晚。To-do：
 保存 Luxmore 住宿确认：10.02 入住、10.04 退房，两晚 ¥4,517.62 人民币，电话 +64 3 249 7526。
 保存已购 10.03 RealNZ 避风港号五人船票：实付 ¥3,323.55 人民币、12:45 报到；回填订单号和实际发船时间，确认只含游船。
-正式下单前一起 review 10.02 萤火虫洞五人下午团：班次、提前签到、返抵、退改与 18:30 The Redcliff 衔接；尚未预订。
+保存已购 10.02 萤火虫洞五人订单：实付 ¥2,979.37 人民币｜15:15 开船｜14:45 报到｜约 17:30 返回；核对退改。
 出发前查 NZTA Journey Planner，确认 Queenstown -> Te Anau 路段正常。
 车辆在 Te Anau 加满油，准备匹配雪链，下载 SH94 离线地图和官方停车图；主付费停车场为唯一停车方案。
 确认 Luxmore 新订单是否含 10.03 早餐及覆盖人数、供应时间；未含餐或无法衔接 08:15 自驾出发就准备五人简餐。
